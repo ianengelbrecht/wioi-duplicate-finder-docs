@@ -1,0 +1,37 @@
+---
+title: Bienvenue sur VARUNA
+description: Outil de recherche et de capture de doublons de spécimens d'herbier.
+template: splash
+hero:
+  tagline: Trouvez les doublons de spécimens d'herbier, standardisez les données botaniques et optimisez votre flux de travail de numérisation.
+  image:
+    alt: Capture d'écran de l'interface principale de capture de données de l'application de recherche de doublons
+    file: ../../../assets/placeholder-hero.svg
+  actions:
+    - text: Commencer
+      link: /fr/guides/example/
+      icon: right-arrow
+    - text: Code Source
+      link: https://github.com/ianengelbrecht/wioi-duplicate-finder
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Fonctionnalités Clés
+
+<CardGrid stagger>
+	<Card title="Recherche &amp; Détection de Doublons" icon="magnifier">
+		Trouvez instantanément des doublons potentiels grâce aux spécimens de référence du GBIF et à la liste de contrôle des plantes vasculaires de Kew.
+	</Card>
+	<Card title="Nettoyage &amp; Édition" icon="pencil">
+		Examinez, modifiez et standardisez les informations des spécimens (dates, taxonomie, localité) directement dans l'interface de saisie.
+	</Card>
+	<Card title="Gestion des Sessions" icon="list-format">
+		Organisez votre travail dans des sessions dédiées, évitez les doublons de saisie et sécurisez vos données locales.
+	</Card>
+	<Card title="Exportation CSV" icon="document">
+		Exportez les spécimens capturés d'une session vers un format CSV standard, prêt à être importé dans votre système de gestion d'herbier.
+	</Card>
+</CardGrid>

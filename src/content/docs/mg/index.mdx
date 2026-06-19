@@ -1,0 +1,37 @@
+---
+title: Tonga soa eto amin'ny VARUNA
+description: Fitaovana fikarohana sy fakana santionan'ny herbarium dika mitovy.
+template: splash
+hero:
+  tagline: Mitadiava dika mitovy amin'ny santionan'ny herbarium, fenoy ny angona ara-botanika, ary amboary ny fandehan'ny asa fandikana nomerika.
+  image:
+    alt: Sarin'ny interface fakana angona amin'ny fampiharana fikarohana dika mitovy
+    file: ../../../assets/placeholder-hero.svg
+  actions:
+    - text: Manomboka
+      link: /mg/guides/example/
+      icon: right-arrow
+    - text: Kaody Loharano
+      link: https://github.com/ianengelbrecht/wioi-duplicate-finder
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Fiasa Lehibe
+
+<CardGrid stagger>
+	<Card title="Fikarohana &amp; Fampitoviana" icon="magnifier">
+		Mitadiava dika mitovy amin'ny alalan'ny santionany GBIF sy ny lisitra Kew Checklist of Vascular Plants.
+	</Card>
+	<Card title="Fanovana &amp; Fanatsarana" icon="pencil">
+		Jereo, ovao, ary fenoy ny mombamomba ny santionany (daty, anarana siantifika, toerana) mivantana amin'ny takelaka.
+	</Card>
+	<Card title="Fitantanana Fizarana" icon="list-format">
+		Alamino amin'ny alalan'ny fizarana (sessions) ny asanao, sorohy ny fidirana in-droa, ary mitahiry angona mivantana.
+	</Card>
+	<Card title="Famoahana ho CSV" icon="document">
+		Avoahy amin'ny endrika CSV ny santionany voaray mba hampidirana azy amin'ny rafitra fitantanana herbarium-nao.
+	</Card>
+</CardGrid>
