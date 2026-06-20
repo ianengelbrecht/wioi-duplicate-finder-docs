@@ -32,7 +32,11 @@ export default defineConfig({
         },
       },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-
+      sidebar: [
+        { label: 'Home', link: '/' },
+        { label: 'About', link: '/about' },
+        { label: 'Installation', link: '/installation' },
+      ],
       plugins: [
         starlightThemeNova(/* options */),
       ],
