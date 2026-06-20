@@ -36,6 +36,17 @@ export default defineConfig({
         { label: 'Home', link: '/' },
         { label: 'About', link: '/about' },
         { label: 'Installation', link: '/installation' },
+        {
+          label: 'Docs', items: [
+            { label: 'Sign up / Sign in', link: '/docs/signin' },
+            { label: 'Application Settings', link: '/docs/settings' },
+            { label: 'Switching Languages', link: '/docs/languages' },
+            { label: 'Capture Sessions', link: '/docs/sessions' },
+            { label: 'Searching Records', link: '/docs/searching' },
+            { label: 'Selecting & Editing', link: '/docs/editing' },
+            { label: 'Exporting Data', link: '/docs/exporting' },
+          ]
+        }
       ],
       plugins: [
         starlightThemeNova(/* options */),
