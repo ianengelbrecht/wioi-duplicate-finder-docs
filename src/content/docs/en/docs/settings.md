@@ -35,7 +35,7 @@ To access the settings:
 
 ## Database Backups
 
-Because all captured specimens and sessions are stored in an offline SQLite file on your local hard drive, regular backups are critical to protect your work against data loss or hard drive failure. Backups are created automatically every time you close the application, and saved for the current day, one per day for the last week, one per week for the last month, and one per month for the last six months. Uneeded backups are pruned automatically by the application.
+Because all captured specimens and sessions are stored in an offline SQLite file on your local hard drive, regular backups are critical to protect your work against data loss or hard drive failure. Backups are created automatically every time you close the application, and saved for the current day, one per day for the last week, one per week for the last month, and one per month for the last six months. Unneeded backups are pruned automatically by the application.
 
 ![Database Backups](/wioi-duplicate-finder-docs/backups.png)
 
