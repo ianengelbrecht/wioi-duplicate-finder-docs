@@ -25,4 +25,4 @@ This tool was developed under the [**VARUNA**](https://varuna-biodiversite.org/)
 ## Reporting Bugs & Feedback
 
 The application is open-source and actively maintained. 
-- If you encounter bugs, have feature requests, or want to submit translation corrections, please file an issue on our [GitHub repository](https://github.com/ianengelbrecht/wioi-duplicate-finder/issues).
+- If you encounter bugs, have feature requests, or want to submit translation corrections, please file an issue on our [GitHub repository](https://github.com/ianengelbrecht/wioi-duplicate-finder/issues). You will need to sign in to Github to be able to do so. 

@@ -7,6 +7,11 @@ import starlightThemeNova from 'starlight-theme-nova'
 export default defineConfig({
   site: 'https://ianengelbrecht.github.io',
   base: '/wioi-duplicate-finder-docs',
+  vite: {
+    define: {
+      'import.meta.env.APP_VERSION': JSON.stringify('0.6.1'),
+    },
+  },
   integrations: [
     starlight({
       title: 'Herbarium Specimen Duplicate Finder',
