@@ -4,7 +4,7 @@ title: About the Duplicate Finder
 
 The **Herbarium Specimen Duplicate Finder and Capture Tool** is a cross-platform desktop application designed to streamline specimen digitisation and botanical data capture. Curators and botanical researchers can use it to enter herbarium records efficiently, standardise taxonomic data, and automatically identify duplicates.
 
-![Screenshot of the Duplicate Finder main workspace](../../../assets/screenshot.png)
+![Screenshot of the Duplicate Finder main workspace](/wioi-duplicate-finder-docs/screenshot.png)
 The main data capture workspace of the Duplicate Finder
 
 ## Key Features
@@ -20,7 +20,7 @@ This tool was developed under the [**VARUNA**](https://varuna-biodiversite.org/)
 - **Implemented by**: Expertise France.
 - **Goal**: VARUNA aims to preserve the rich, unique biodiversity of the Western Indian Ocean islands (WIOI) through capacity building, data sharing, and the modernisation of herbarium collections.
 
-![VARUNA Funder Logo](/funders.png)
+![VARUNA Funder Logo](/wioi-duplicate-finder-docs/funders.png)
 
 ## Reporting Bugs & Feedback
 

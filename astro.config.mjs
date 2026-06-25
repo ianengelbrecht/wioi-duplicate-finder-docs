@@ -5,6 +5,8 @@ import starlightThemeNova from 'starlight-theme-nova'
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://ianengelbrecht.github.io',
+  base: '/wioi-duplicate-finder-docs',
   integrations: [
     starlight({
       title: 'Herbarium Specimen Duplicate Finder',

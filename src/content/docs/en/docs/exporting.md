@@ -12,7 +12,7 @@ Once you have finished capturing specimen records for a session, you can export 
 1. Select a capture session to open the capturing workspace.
 2. At the top right, click the green **Export CSV** button.
 
-![Export CSV Button in Workspace](/export-button.png)
+![Export CSV Button in Workspace](/wioi-duplicate-finder-docs/export-button.png)
 
 3. A file save dialog will open on your computer.
 4. Choose the directory where you want to save the CSV file.
@@ -114,14 +114,14 @@ To ensure all characters are imported correctly:
 
 - Open Microsoft Excel.
 - Select the Data tab.
-![Excel Data Tab](/excel-import-data-tab.png)
+![Excel Data Tab](/wioi-duplicate-finder-docs/excel-import-data-tab.png)
 - Click From Text/CSV.
 - Browse to and select the exported CSV file.
 - In the import preview window, set File Origin (or Encoding) to 65001: Unicode (UTF-8) if it is not already selected.
-![Select UTF8](/excel-import-origin.png)
+![Select UTF8](/wioi-duplicate-finder-docs/excel-import-origin.png)
 - Verify that special characters appear correctly in the preview.
 - Click Load.
 
 This ensures that all text is imported using the correct UTF-8 encoding and prevents character corruption. Your dataset will now appear in Excel, usually with colourful format. You can remove that formatting by clicking the Table Style dropdown at the top right and selecting the unstyled table. It is also recommended to freeze the first row (the field headers) under the View tab while working with the data so that you can always see the field headers. 
 
-![Table formatting](/excel-import-table.png)
+![Table formatting](/wioi-duplicate-finder-docs/excel-import-table.png)

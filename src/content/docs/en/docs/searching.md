@@ -9,7 +9,7 @@ The header of the search panel displays the numbers of local database records:
 - **Reference Data**: Total duplicate reference records loaded from GBIF for your area of interest.
 - **WCVP**: Total taxonomic names loaded from Kew's World Checklist of Vascular Plants as well as the current checklist version.
 
-![Search Pane UI with Valid Filters](/search-pane.png)
+![Search Pane UI with Valid Filters](/wioi-duplicate-finder-docs/search-pane.png)
 
 ---
 
@@ -58,7 +58,7 @@ To prevent very slow database queries on broad terms and to ensure searches yiel
 
 Matching records are displayed in the results table below the filters.
 
-![Search Results Table List](/search-results.png)
+![Search Results Table List](/wioi-duplicate-finder-docs/search-results.png)
 
 ### Results Table Columns:
 1. **HERB**: The collection code acronym of the herbarium where the reference specimen is stored.

@@ -8,7 +8,7 @@ The application uses a **local database system** to store specimen records and u
 
 When launching the application for the first time, it automatically sets up the SQLite database environment. You will see a temporary database initialization loading screen.
 
-![Database Initialization Loading Screen](/loading-db.png)
+![Database Initialization Loading Screen](/wioi-duplicate-finder-docs/loading-db.png)
 
 If the database is prepared successfully:
 - If a user was previously logged in on the device, the app automatically opens the dashboard.
@@ -20,7 +20,7 @@ If the database is prepared successfully:
 
 Because the database is stored entirely on your computer, account creation does not register you on a remote website. Instead, it creates a local user profile within your offline database. This enables multiple researchers using the same machine to maintain separate collections.
 
-![Sign In & Registration Form](/auth-screen.png)
+![Sign In & Registration Form](/wioi-duplicate-finder-docs/auth-screen.png)
 
 ### Creating an Account (Sign Up)
 1. On the Sign In screen, click **Need an account? Register** at the bottom of the card.

@@ -9,7 +9,7 @@ To access the settings:
 1. Log in to the application.
 2. On the dashboard, click the **Application Settings** button in the left navigation panel.
 
-![Application Settings Panel](/settings-tab.png)
+![Application Settings Panel](/wioi-duplicate-finder-docs/settings-tab.png)
 
 ---
 
@@ -37,7 +37,7 @@ To access the settings:
 
 Because all captured specimens and sessions are stored in an offline SQLite file on your local hard drive, regular backups are critical to protect your work against data loss or hard drive failure. Backups are created automatically every time you close the application, and saved for the current day, one per day for the last week, one per week for the last month, and one per month for the last six months. Uneeded backups are pruned automatically by the application.
 
-![Database Backups](/backups.png)
+![Database Backups](/wioi-duplicate-finder-docs/backups.png)
 
 ### Database Backup Location
 - **Field**: Shows the file path to the folder where backups are saved.

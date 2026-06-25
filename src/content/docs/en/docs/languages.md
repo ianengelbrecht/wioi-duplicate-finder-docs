@@ -19,7 +19,7 @@ You can change the language of the user interface at any time.
    - **MG**: Malagasy (Malagasy)
 3. The interface elements, labels, place holders, and validation warnings will update immediately. The system also remembers your preference the next time you open the app.
 
-![Language Selectors in Header](/language-selector.png)
+![Language Selectors in Header](/wioi-duplicate-finder-docs/language-selector.png)
 
 ---
 

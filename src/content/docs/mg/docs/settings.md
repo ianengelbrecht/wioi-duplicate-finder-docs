@@ -1,0 +1,56 @@
+---
+title: Fametrahana ny Fampiharana
+description: Hamarino ny kaodin'ny fitambaram-bokatra, ny famoahana lahatahiry, ary ny toerana fitahirizana ny tahiry data.
+---
+
+Ny pejin'ny fametrahana dia ahafahanao manitsy ny safidy mahazatra eo an-toerana, ny fomba famoahana lahatahiry, ary ny safidin'ny backup an'ny tahirin-kevitra. Ireo fametrahana ireo dia tehirizina eo an-toerana.
+
+To access the settings:
+1. Midira amin'ny fampiharana.
+2. Eo amin'ny tabilao, tsindrio ny bokotra **Fametrahana ny Fampiharana** ao amin'ny tontonana fitetezana ankavia.
+
+![Tontonana Fametrahana ny Fampiharana](/wioi-duplicate-finder-docs/settings-tab.png)
+
+---
+
+## Ny Fametrahana
+
+### Kaodin'ny Fitambaram-bokatra miasa
+- **Inona izany**: Ny fanafohezan-teny mahazatra ekena eo amin'ny sehatra iraisam-pirenena ho an'ny tahirin-java-maniry fototra misy anao (ohatra, ny tahirin-java-maniry izay ampidiranao ny santiona, o.hat. `TAN` ho an'ny Tahirin-java-manirin'i Tsimbazaza, `NU` ho an'ny Tahirin-java-manirin'ny Anjerimanontolon'i KwaZulu-Natal, `PRE` ho an'ny Tahirin-java-maniry Nasionaly any Pretoria).
+- **Ahoana ny fiasany**: Ny fampidirana kaody eto dia mitahiry izany ho kaodin'ny fitambaram-bokatra mahazatra. Isaky ny mitahiry na mifidy santiona ianao, dia voarakitra ho an'ny andrim-panjakana fototra misy ilay santiona io sanda io.
+- Indray mandeha ihany ianao no mila mampiditra ity sanda ity, rehefa manomboka mampiasa ny fampiharana.
+
+### Fomba Famoahana Lahatahiry
+- **Inona izany**: Ny endriky ny fisie misy faingo manasaraka (CSV) izay jinjaina rehefa mamoaka ny fizaranao ianao.
+- **Safidy**:
+  - **Darwin Core (DwC)**: Mampifanaraka ny angon-drakitra amin'ny lohateny DwC mahazatra toy ny `catalogNumber`, `recordedBy`, `decimalLatitude`, sns.
+  - **BRAHMS**: Mampifanaraka ny angon-drakitra amin'ny lohateny BRAHMS7 mahazatra toy ny `BARCODE`, `COLLECTOR`, `DAY`, `MONTH`, `YEAR`, sns. (tsara indrindra raha hampidirina mivantana ao amin'ny tahirin-kevitra BRAHMS7).
+- Raha manana endrika angon-drakitra hafa tianao hamoahana ianao, toy ny Microsoft Excel, tsidiho azafady ny [pejy Github]() an'ny tetikasa ary mamorona olana (issue) vaovao any miaraka amin'ny fangatahanao.
+
+### Hampiditra ny mari-toerana QDS
+- **Inona izany**: Safidy amin'ny alalan'ny fanamarihana (checkbox) mba hikajiana ny kaody Quarter Degree Square (QDS).
+- **Ahoana ny fiasany**: Raha voamarika izany, rehefa mamoaka ny santiona voatahiry ianao, ny rafitra dia mikajy ny kaody QDS (Quarter Degree Grid Cell) avy amin'ny mari-toerana GPS (`decimalLatitude` sy `decimalLongitude`) ary mampiditra izany ao amin'ny angon-drakitra navoaka. Ny QDS dia ampiasaina indrindra any amin'ny tahirin-java-maniry any atsimo sy atsinanan'i Afrika, fa raha manana rafitra mari-toerana hafa tianao hampiasaina ianao dia mamorona olana (issue) ao amin'ny Github ihany koa azafady.
+
+---
+
+## Backup ny Tahirin-kevitra
+
+Satria ny santiona sy ny fizarana rehetra voatahiry dia voatahiry ao anaty fisie SQLite ivelan'ny aterineto ao amin'ny kapila mafy (hard drive) eo an-toerana, dia zava-dehibe ny manao backup tsy tapaka mba hiarovana ny asanao amin'ny fahaverezan'ny angon-drakitra na ny fahavoazan'ny kapila mafy. Misy backup miforona ho azy isaky ny manidy ny fampiharana ianao, ary tehirizina ho an'ny andro ankehitriny, iray isan'andro ho an'ny herinandro lasa, iray isan-kerinandro ho an'ny volana lasa, ary iray isam-bolana ho an'ny enim-bolana lasa. Ny backup tsy ilaina intsony dia fafan'ny fampiharana ho azy.
+
+![Backup ny Tahirin-kevitra](/wioi-duplicate-finder-docs/backups.png)
+
+### Toerana fitahirizana ny tahiry data
+- **Faritra**: Mampiseho ny lalan'ny fisie mankany amin'ny fampirimana fitahirizana ny backup.
+- **Misafidy fampirimana**: Manokatra takelaka fitetezana fisie ahafahanao misafidy lahatahiry iray ao amin'ny solosainao (na kapila ivelany/lahatahiry rahona).
+
+### Backup atao Tanana
+- **Hanao Backup Izao**: Tsindrio ity bokotra ity mba hanaovana backup eo no ho eo amin'ny tahirin-kevitrao. Hisy fisie `.db` misy mariky ny fotoana sy misy ny mpampiasa, fizarana ary santiona voatahiry rehetra hiforona ao amin'ny fampirimana backup-nao. Ny fampandrenesana fahombiazana dia hampiseho ny lalan'ny backup voatahiry. Ny backup atao tanana dia tsy fafana ao amin'ny tantaran'ny backup toy ny backup mandeha ho azy. 
+
+### Hamerina ny Backup
+- **Hamerina ny Backup**: Tsindrio ity bokotra ity raha mila mamerina ny fampiharanao amin'ny toetrany teo aloha ianao. 
+- Hahazo bitsika hisafidy fisie backup `.db` ianao.
+- **FAMPITANDREMANA**: Ny famerenana ny backup dia hanolo tanteraka ny tahirin-kevitra eo an-toerana ankehitriny. Ataovy azo antoka fa nanao backup ny angon-drakitra vaovao ianao alohan'ny hanohizana.
+- Misy takelaka fanamafisana hiseho mba hisorohana ny fanoloana tsy nahy.
+
+### Fitantanana ny backup-nao
+Hevitra tsara ny manao dika mitovy amin'ireo fisie backup-nao sy mitahiry azy ireo amin'ny kapila mafy hafa na mandika azy amin'ny solosaina hafa, raha toa ka simba, angalarina, na iharan'ny loza hafa ny solosaina ankehitriny. Fomba fanao tsara ihany koa ny mitahiry dika faharoa amin'ny backup-nao any amin'ny toerana hafa (off-site). Ny backup an'ny tahirin-kevitra dia dika mitovy fotsiny amin'ny fisie tahirin-kevitra, ka mora tokoa ny manao dika mitovy toy izany. 

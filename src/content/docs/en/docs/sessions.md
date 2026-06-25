@@ -11,7 +11,7 @@ To access your sessions:
 1. Open the application and sign in.
 2. Select the **Capture Sessions** tab in the dashboard left navigation.
 
-![Capture Sessions List](/sessions-tab.png)
+![Capture Sessions List](/wioi-duplicate-finder-docs/sessions-tab.png)
 
 ---
 
@@ -37,7 +37,7 @@ To access your sessions:
 1. Click the red **Delete** button next to the session in the dashboard list.
 2. A confirmation modal will appear. Make doubly sure you want to delete the session before proceeding, and you should ideally only delete sessions after the data have been exported.
 
-![Delete Session Confirmation Modal](/delete-session-modal.png)
+![Delete Session Confirmation Modal](/wioi-duplicate-finder-docs/delete-session-modal.png)
 
 > [!CAUTION]
 > Deleting a session permanently deletes all specimen records captured inside it. This action is irreversible. Always ensure you have exported your data before deleting a session.

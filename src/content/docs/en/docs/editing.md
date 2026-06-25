@@ -5,7 +5,7 @@ description: Learn how to load records, capture new specimens, use fast-entry ac
 
 The right pane of the workspace displays the **Specimen Capture Form**. This form allows you to record new specimen details or edit records saved in the active capturing session.
 
-![Main Capture Form Panels](/capture-form.png)
+![Main Capture Form Panels](/wioi-duplicate-finder-docs/capture-form.png)
 
 ---
 
@@ -51,7 +51,7 @@ The **Locality** and **Locality Notes** fields contain custom copy and paste but
 - When you type or paste a date into the **Verbatim Date** field (e.g. `20 mai 1984` or `May 20, '84`), the application automatically parses it and splits the values into the **Year**, **Month**, and **Day** fields.
 - **Language Toggle**: The verbatim date field also has a language toggle that sets how the date value is parsed (date formats vary between languages). Switching the toggle will recalculate **Year**, **Month**, and **Day** accordingly.
 
-![Verbatim Date EN/FR Toggle](/date-language-toggle.png)
+![Verbatim Date EN/FR Toggle](/wioi-duplicate-finder-docs/date-language-toggle.png)
 
 ### 4. Verbatim Coordinates
 - It is always good practice to record coordinates on specimen labels exactly as they are written, without converting them to another form. 
@@ -76,7 +76,7 @@ Several of the form fields use the local reference database to suggest values wh
 - **Adding New Collectors (Agents)**: 
   When you type a primary collector name in the autocomplete field and tab away, the app checks the database registry. If the collector does not exist, a dialog prompts you: *"Would you like to add this collector to the registry?"* Confirming adds them, making their name available for future autocompletes.
   
-  ![New Name Registration Prompt Modal](/new-name-prompt.png)
+  ![New Name Registration Prompt Modal](/wioi-duplicate-finder-docs/new-name-prompt.png)
 
 - **Entering Custom Taxa**: 
   If a specimen represents a species not found in the WCVP reference database (such as a new species, cultivar, or manuscript name), you are **not blocked**. You can simply type the new name and save the record. In the background, the database stored the WCVP taxonID for existing names (and exported if needed). New names will have the `taxonID` blank.
