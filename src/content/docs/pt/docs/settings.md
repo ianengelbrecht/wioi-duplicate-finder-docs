@@ -3,7 +3,7 @@ title: Configurações do Aplicativo
 description: Configure o código da coleção, formatos de exportação e locais de backup do banco de dados.
 ---
 
-A aba de configurações permite que você configure seus padrões de trabalho locais, formatos de exportação e preferências de backup do banco de dados. Essas configurações são salvas localmente.
+A aba de configurações permite que você veja os detalhes do seu banco de dados de referência atual e configure seus padrões de trabalho locais, formatos de exportação e preferências de backup do banco de dados.
 
 Para acessar as configurações:
 1. Faça login no aplicativo.
@@ -12,6 +12,20 @@ Para acessar as configurações:
 ![Painel de Configurações do Aplicativo](/wioi-duplicate-finder-docs/settings-tab.png)
 
 ---
+
+## Conjuntos de dados de referência
+
+### Registros de duplicatas
+
+O Localizador de Duplicatas utiliza um conjunto de dados de referência de registros de espécimes preparados a partir do GBIF, para uma região específica e herbários de origem. Por exemplo, se você sabe que sua coleção possui muitas duplicatas no Kew, você trabalharia com dados do GBIF do Kew para o seu país ou região.
+
+Os conjuntos de dados disponíveis estão listados na página de [Instalação](./installation). Se desejar um conjunto de dados para sua região/país, registre uma solicitação (issue) no repositório do GitHub da ferramenta. Preparar um conjunto de dados dá bastante trabalho porque os dados do GBIF não são perfeitos (por exemplo, coletores e códigos de coleção precisam ser padronizados). Os scripts para preparação de conjuntos de dados também estão disponíveis no repositório do GitHub se você mesmo quiser preparar um conjunto de dados.
+
+Assim que tiver um conjunto de dados pronto para importação, você poderá clicar no botão Carregar Novo Conjunto de Dados (Load New Dataset) e terá a opção de selecionar o arquivo a ser importado. Observe que a importação removerá os registros de referência existentes do seu banco de dados e os substituirá pelos novos dados. A importação levará alguns minutos e, depois disso, você poderá usar o novo conjunto de dados para capturar seus espécimes.
+
+### Registros taxonômicos do WCVP
+
+O Localizador de Duplicatas utiliza o World Checklist of Vascular Plants (WCVP) como sua base taxonômica. O WCVP é atualizado duas vezes por ano e a versão mais recente está disponível para [download neste link](https://sftp.kew.org/pub/data-repositories/WCVP/). Se você deseja atualizar o conjunto de dados do WCVP no seu aplicativo, baixe o arquivo mais recente desse link (`wcvp.zip`), descompacte o conteúdo e, em seguida, no Localizador de Duplicatas, clique no botão Importar/Atualizar WCVP (Import/Update WCVP) e selecione o arquivo `wcvp_names.csv`. O aplicativo atualizará os dados do WCVP e então você poderá continuar trabalhando.
 
 ## Configurações
 

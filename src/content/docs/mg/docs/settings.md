@@ -3,15 +3,29 @@ title: Fametrahana ny Fampiharana
 description: Hamarino ny kaodin'ny fitambaram-bokatra, ny famoahana lahatahiry, ary ny toerana fitahirizana ny tahiry data.
 ---
 
-Ny pejin'ny fametrahana dia ahafahanao manitsy ny safidy mahazatra eo an-toerana, ny fomba famoahana lahatahiry, ary ny safidin'ny backup an'ny tahirin-kevitra. Ireo fametrahana ireo dia tehirizina eo an-toerana.
+Ny pejin'ny fametrahana dia ahafahanao mahita ny antsipirian'ny tahirin-kevitra fototra ampiasainao ankehitriny, ary manitsy ny safidy mahazatra eo an-toerana, ny fomba famoahana lahatahiry, ary ny safidin'ny backup an'ny tahirin-kevitra.
 
-To access the settings:
+Raha te hiditra amin'ny fametrahana:
 1. Midira amin'ny fampiharana.
 2. Eo amin'ny tabilao, tsindrio ny bokotra **Fametrahana ny Fampiharana** ao amin'ny tontonana fitetezana ankavia.
 
 ![Tontonana Fametrahana ny Fampiharana](/wioi-duplicate-finder-docs/settings-tab.png)
 
 ---
+
+## Tahirin-kevitra fototra
+
+### Firaketana dika mitovy
+
+Ny Fikarohana Dika Mitovy dia mampiasa tahirin-kevitra fototra misy firaketana santionan-java-maniry voaomana avy amin'ny GBIF, ho an'ny faritra sy tahirin-java-maniry fototra niaviana manokana. Ohatra, raha fantatrao fa manana dika mitovy maro any amin'ny Kew ny fitambaran-tsantionanao, dia ny tahirin-kevitra GBIF avy any amin'ny Kew ho an'ny firenenao na ny faritra misy anao no hampiasainao.
+
+Ireo tahirin-kevitra azo ampiasaina dia voatanisa ao amin'ny pejy [Fametrahana](./installation). Raha mila tahirin-kevitra ho an'ny faritra na firenenao ianao, dia mamorona olana (issue) ao amin'ny tahiry GitHub an'ity fitaovana ity azafady. Mitaky asa be ny fanomanana tahirin-kevitra satria tsy tonga lafatra ny angon-drakitra avy amin'ny GBIF (mila ampanarahina fenitra ny anaran'ny mpamory sy ny kaodin'ny tahirin-java-maniry, ohatra). Ny fandaharana (scripts) ho an'ny fanomanana ny tahirin-kevitra dia hita ao amin'ny tahiry GitHub ihany koa raha te hanomana izany ianao.
+
+Raha vantany vao manana tahirin-kevitra vonona hafarana ianao, dia azonao atao ny manindry ny bokotra Hampiditra Tahirin-kevitra Vaovao (Load New Dataset), ary hisy safidy hisafidianana ny fisie hafarana. Mariho fa ny fanafarana dia hamafa ireo firaketana fototra efa misy ao amin'ny tahirin-kevitrao ka hanolo azy ireo amin'ny angon-drakitra vaovao. Haharitra minitra vitsy ny fanafarana, ary aorian'izay dia azonao ampiasaina ilay tahirin-kevitra vaovao amin'ny fitahirizana ny santionanao.
+
+### Firaketana ara-tsokajy WCVP
+
+Ny Fikarohana Dika Mitovy dia mampiasa ny World Checklist of Vascular Plants ho toy ny tahiry ara-tsokajy fototra (taxon backbone). Havaozina indroa isan-taona ny WCVP ary ny dikan-teny farany indrindra dia azo [alaina amin'ity rohy ity](https://sftp.kew.org/pub/data-repositories/WCVP/). Raha te hanavao ny tahirin-kevitra WCVP ao amin'ny fampiharanao ianao, alao ny fisie farany amin'io rohy io (`wcvp.zip`), vahao ny ao anatiny (unzip), ary avy eo ao amin'ny Fikarohana Dika Mitovy, tsindrio ny bokotra Hampiditra/Hanavao ny WCVP (Import/Update WCVP), ary fidio ny fisie `wcvp_names.csv`. Ny fampiharana dia hanavao ny angon-drakitra WCVP ary afaka manohy miasa ianao avy eo.
 
 ## Ny Fametrahana
 

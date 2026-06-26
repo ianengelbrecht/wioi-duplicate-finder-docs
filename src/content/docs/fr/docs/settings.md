@@ -3,7 +3,7 @@ title: Paramètres de l'application
 description: Configurez le code de collection, les formats d'exportation et les emplacements de sauvegarde de la base de données.
 ---
 
-L'onglet des paramètres vous permet de configurer vos valeurs par défaut de travail locales, les formats d'exportation et vos préférences de sauvegarde de la base de données. Ces paramètres sont conservés localement.
+L'onglet des paramètres vous permet de voir les détails de votre base de données de référence actuelle et de configurer vos valeurs par défaut de travail locales, les formats d'exportation et vos préférences de sauvegarde de la base de données.
 
 Pour accéder aux paramètres :
 1. Connectez-vous à l'application.
@@ -12,6 +12,20 @@ Pour accéder aux paramètres :
 ![Panneau des paramètres de l'application](/wioi-duplicate-finder-docs/settings-tab.png)
 
 ---
+
+## Jeux de données de référence
+
+### Enregistrements de doublons
+
+Le Duplicate Finder utilise un jeu de données de référence d'enregistrements de spécimens préparé à partir du GBIF, pour une région et des herbiers sources particuliers. Par exemple, si vous savez que votre collection possède de nombreux doublons à Kew, vous travailleriez avec des données GBIF de Kew pour votre pays ou région. 
+
+Les jeux de données disponibles sont répertoriés sur la page [Installation](./installation). Si vous souhaitez obtenir un jeu de données pour votre région/pays, veuillez signaler un problème sur le dépôt GitHub de l'outil. La préparation d'un jeu de données demande beaucoup de travail car les données du GBIF ne sont pas parfaites (les collecteurs et les codes de collection doivent être standardisés, par exemple). Les scripts de préparation des jeux de données sont également disponibles sur le dépôt GitHub si vous souhaitez préparer un jeu de données vous-même. 
+
+Une fois que vous avez un jeu de données prêt à être importé, vous pouvez cliquer sur le bouton Charger un nouveau jeu de données (Load New Dataset), et vous aurez la possibilité de sélectionner le fichier à importer. Notez que l'importation supprimera les enregistrements de référence existants de votre base de données et les remplacera par les nouvelles données. L'importation prendra quelques minutes, puis vous pourrez utiliser le nouveau jeu de données pour saisir vos spécimens. 
+
+### Enregistrements taxonomiques du WCVP
+
+Le Duplicate Finder utilise le World Checklist of Vascular Plants (WCVP) comme base taxonomique. Le WCVP est mis à jour deux fois par an et la dernière version est disponible en [téléchargement à ce lien](https://sftp.kew.org/pub/data-repositories/WCVP/). Si vous souhaitez mettre à jour le jeu de données WCVP dans votre application, téléchargez le dernier fichier à partir de ce lien (`wcvp.zip`), décompressez le contenu, puis, dans le Duplicate Finder, cliquez sur le bouton Importer/Mettre à jour le WCVP (Import/Update WCVP) et sélectionnez le fichier `wcvp_names.csv`. L'application mettra à jour les données WCVP et vous pourrez ensuite continuer à travailler.
 
 ## Paramètres de configuration
 

@@ -3,7 +3,7 @@ title: Application Settings
 description: Configure the collection code, export formats, and database backup locations.
 ---
 
-The settings tab allows you to configure your local working defaults, export formats, and database backup preferences. These settings are persisted locally.
+The settings tab allows you to see your current reference database details and configure your local working defaults, export formats, and database backup preferences.
 
 To access the settings:
 1. Log in to the application.
@@ -12,6 +12,20 @@ To access the settings:
 ![Application Settings Panel](/wioi-duplicate-finder-docs/settings-tab.png)
 
 ---
+
+## Reference datasets
+
+### Duplicate records
+
+The Duplicate Finder makes use of a reference dataset of specimen records prepared from GBIF, for a particular region and source herbaria. For example, if you know that your collection has many duplicates in Kew, you would work with GBIF data from Kew for your country or region. 
+
+Available datasets are listed on the [Installation](./installation) page. If you would like a dataset for your region/country, please log an issue on the Github repo for the tool. It takes quite a lot of work to prepare a dataset because GBIF data are no perfect (collectors and collection codes need to be standardized, for example). The scripts for preparing datasets are also available on the Github repo if you would like to prepare a dataset yourself. 
+
+Once you have a dataset ready for import, you can click on the Load New Dataset button, and you will be given the option to select the file to import. Note that the import will remove the existing reference records from your database and replace them with the new data. The import will take a few minutes, and then you can use the new dataset for capturing your specimens. 
+
+### WCVP taxonomic records
+
+The Duplicate Finder makes use of the World Catalog of Vascular Plants as its taxon backbone. The WCVP is updated twice a year and the latest version is available for [download at this link](https://sftp.kew.org/pub/data-repositories/WCVP/). If you want to update the WCVP dataset in your app, download the latest file from that link (`wcvp.zip`), unzip the contents, and then in the Duplicate Finder click the Import/Update WCVP button, and select the `wcvp_names.csv` file. The app will update the WCVP data and then you can continue working. 
 
 ## Configuration Settings
 
