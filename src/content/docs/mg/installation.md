@@ -7,7 +7,7 @@ description: Torolàlana momba ny fampidinana sy ny fametrahana
 
 Mba hametrahana ny Fitaovana Fikarohana Dika Mitovy dia mila mampidina rakitra roa ianao: ny fametrahana fampiharana (installer) sy ny rakitra tahirin-kevitra (database) izay hiarahan'ny fampiharana miasa. Eto ambany ny rohy fampidinana, fidio ny tahirin-kevitra sahaza ho an'ny faritra misy anao. 
 
-**[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/duplicate-finder_0.6.0_x64-setup.exe)**
+**[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)**
 
 Fidio ny tahirin-kevitra hiasana:
 - [Rakitra zip ho an'ny tahirin-kevitra dika mitovy WIOI](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
