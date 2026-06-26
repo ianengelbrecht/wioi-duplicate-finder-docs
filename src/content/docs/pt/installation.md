@@ -7,11 +7,14 @@ description: Instruções de download e instalação
 
 Para instalar o Localizador de Duplicatas, você precisará baixar dois arquivos: o instalador do aplicativo e um arquivo de banco de dados com o qual o aplicativo funcionará. Os links para download estão abaixo, escolha o banco de dados apropriado para a sua região. 
 
-**[Instalador do aplicativo](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)**
+#### Etapa 1: Baixe o instalador do aplicativo
 
-Selecione o banco de dados para trabalhar:
-- [Arquivo zip do banco de dados de duplicatas WIOI](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
-- Arquivo zip do banco de dados de duplicatas da África Austral (em breve...)
+[Instalador do aplicativo](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)
+
+#### Etapa 2: Selecione e baixe um banco de dados para a sua região
+
+- [Ilhas do Oceano Índico Ocidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- África Austral (em breve...)
 
 O banco de dados está compactado (zip), então você precisa descompactá-lo e mover o arquivo `.db` para um local adequado em seu computador antes de começar a trabalhar com ele (por exemplo, sua pasta Documentos). 
 

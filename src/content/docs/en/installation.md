@@ -7,11 +7,14 @@ description: Download and installation instructions
 
 To install the Duplicate Finder you will need to download two files, the application installer and a database file for the application will work with. Download links are below, choose the appropriate database for your region. 
 
-**[Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)**
+#### Step 1: Download the application installer
 
-Select the database to work with:**
-- **[WIOI duplicates database zip file](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)**
-- Southern Africa duplicates database zip file (coming soon...)
+[Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)
+
+#### Step 2: Select and download a database for your region
+
+- [West Indian Ocean Islands](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- Southern Africa (coming soon...)
 
 The database is zipped, so you need to unzip it and move the .db file to a suitable location on your computer before you start to work with it (e.g. your Documents folder) . 
 

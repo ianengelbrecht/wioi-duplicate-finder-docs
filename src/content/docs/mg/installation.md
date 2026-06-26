@@ -7,11 +7,14 @@ description: Torolàlana momba ny fampidinana sy ny fametrahana
 
 Mba hametrahana ny Fitaovana Fikarohana Dika Mitovy dia mila mampidina rakitra roa ianao: ny fametrahana fampiharana (installer) sy ny rakitra tahirin-kevitra (database) izay hiarahan'ny fampiharana miasa. Eto ambany ny rohy fampidinana, fidio ny tahirin-kevitra sahaza ho an'ny faritra misy anao. 
 
-**[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)**
+#### Dingana 1: Ampidino ny fametrahana fampiharana
 
-Fidio ny tahirin-kevitra hiasana:
-- [Rakitra zip ho an'ny tahirin-kevitra dika mitovy WIOI](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
-- Rakitra zip ho an'ny tahirin-kevitra dika mitovy aty Afrika Atsimo (ho avy tsy ho ela...)
+[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)
+
+#### Dingana 2: Fidio sy ampidino ny tahirin-kevitra ho an'ny faritra misy anao
+
+- [Nosy ao amin'ny Ranomasimbe Indiana Andrefana](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- Afrika Atsimo (ho avy tsy ho ela...)
 
 Voafintina (zipped) ny tahirin-kevitra, ka mila mamaha azy ianao (unzip) ary mamindra ny rakitra `.db` amin'ny toerana mety amin'ny solosainao alohan'ny hanombohanao miasa aminy (o.hat. ao amin'ny lahatahiry Documents-nao). 
 
