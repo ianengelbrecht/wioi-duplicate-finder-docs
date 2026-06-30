@@ -9,7 +9,7 @@ Para instalar o Localizador de Duplicatas, você precisará baixar dois arquivos
 
 #### Etapa 1: Baixe o instalador do aplicativo
 
-[Instalador do aplicativo](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.2/duplicate-finder_0.6.2_x64-setup.exe)
+[Instalador do aplicativo](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
 
 #### Etapa 2: Selecione e baixe um banco de dados para a sua região
 

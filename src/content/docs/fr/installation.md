@@ -9,7 +9,7 @@ Pour installer la recherche de doublons (Duplicate Finder), vous devrez téléch
 
 #### Étape 1 : Télécharger l'installateur de l'application
 
-[Installateur de l'application](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.2/duplicate-finder_0.6.2_x64-setup.exe)
+[Installateur de l'application](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
 
 #### Étape 2 : Sélectionner et télécharger une base de données pour votre région
 
