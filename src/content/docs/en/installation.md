@@ -9,7 +9,7 @@ To install the Duplicate Finder you will need to download two files, the applica
 
 #### Step 1: Download the application installer
 
-[Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)
+[Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.2/duplicate-finder_0.6.2_x64-setup.exe)
 
 #### Step 2: Select and download a database for your region
 

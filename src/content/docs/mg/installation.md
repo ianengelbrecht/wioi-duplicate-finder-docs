@@ -9,7 +9,7 @@ Mba hametrahana ny Fitaovana Fikarohana Dika Mitovy dia mila mampidina rakitra r
 
 #### Dingana 1: Ampidino ny fametrahana fampiharana
 
-[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.1/duplicate-finder_0.6.1_x64-setup.exe)
+[Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.2/duplicate-finder_0.6.2_x64-setup.exe)
 
 #### Dingana 2: Fidio sy ampidino ny tahirin-kevitra ho an'ny faritra misy anao
 
