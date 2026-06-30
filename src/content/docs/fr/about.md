@@ -15,10 +15,10 @@ L'espace de travail principal de saisie des données de la recherche de doublons
 
 ## Informations sur le financeur
 
-Cet outil a été développé dans le cadre du programme de biodiversité [**VARUNA**](https://varuna-biodiversite.org/) :
+Cet outil a été développé pour le Réseau d'herbiers de l'océan Indien occidental (RHOIO) dans le cadre du programme de biodiversité [**VARUNA**](https://varuna-biodiversite.org/) :
 - **Financé par** : L'Agence Française de Développement (AFD).
 - **Mis en œuvre par** : Expertise France.
-- **Objectif** : VARUNA vise à préserver la biodiversité riche et unique des îles du sud-ouest de l'océan Indien (WIOI) grâce au renforcement des capacités, au partage de données et à la modernisation des collections d'herbiers.
+- **Objectif** : VARUNA vise à préserver la biodiversité riche et unique des îles du sud-ouest de l'océan Indien grâce au renforcement des capacités, au partage de données et à la modernisation des collections d'herbiers.
 
 ![Logo du financeur VARUNA](/wioi-duplicate-finder-docs/funders.png)
 

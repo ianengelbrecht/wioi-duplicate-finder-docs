@@ -15,10 +15,10 @@ The main data capture workspace of the Duplicate Finder
 
 ## Funder Information
 
-This tool was developed under the [**VARUNA**](https://varuna-biodiversite.org/) biodiversity program:
+This tool was developed for the Réseau d'herbiers de l'océan Indien occidental (RHOIO, West Indian Ocean Herbarium Network) under the [**VARUNA**](https://varuna-biodiversite.org/) biodiversity program:
 - **Financed by**: The French Development Agency (AFD - Agence Française de Développement).
 - **Implemented by**: Expertise France.
-- **Goal**: VARUNA aims to preserve the rich, unique biodiversity of the Western Indian Ocean islands (WIOI) through capacity building, data sharing, and the modernisation of herbarium collections.
+- **Goal**: VARUNA aims to preserve the rich, unique biodiversity of the Western Indian Ocean islands through capacity building, data sharing, and the modernisation of herbarium collections.
 
 ![VARUNA Funder Logo](/wioi-duplicate-finder-docs/funders.png)
 

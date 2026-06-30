@@ -38,7 +38,7 @@ export default defineConfig({
           lang: 'mg',
         },
       },
-      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/ianengelbrecht/wioi-duplicate-finder-docs' }],
       sidebar: [
         { label: 'Home', link: '/' },
         { label: 'About', link: '/about' },

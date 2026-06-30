@@ -15,10 +15,10 @@ Ny toeram-piasana lehibe amin'ny fitahirizana tahirin-kevitra amin'ny Fikarohana
 
 ## Mombamomba ny Mpanohana ara-bola
 
-Ity fitaovana ity dia novolavolaina tao anatin'ny fandaharana momba ny zava-maniry isan-karazany [**VARUNA**](https://varuna-biodiversite.org/):
+Ity fitaovana ity dia novolavolaina ho an’ny Réseau d'herbiers de l'océan Indien occidental (RHOIO, Tambajotran’ny Herbarioma eto amin’ny Ranomasimbe Indianina Andrefana) ao anatin’ny programa momba ny harena voajanahary [**VARUNA**](https://varuna-biodiversite.org/):
 - **Novatsian'ny**: Agence Française de Développement (AFD).
 - **Notanterahin'ny**: Expertise France.
-- **Tanjona**: Ny VARUNA dia mikendry ny hiaro ny zava-maniry sy ny biby isan-karazany manan-karena sy miavaka any amin'ireo nosy ao amin'ny Ranomasimbe Indiana Andrefana (WIOI) amin'ny alalan'ny fanamafisana ny fahaiza-manao, ny fifampizarana tahiry, ary ny fanavaozana ny fitambaram-bokatra ao amin'ny tahirin-java-maniry.
+- **Tanjona**: Ny VARUNA dia mikendry ny hiaro ny zava-maniry sy ny biby isan-karazany manan-karena sy miavaka any amin'ireo nosy ao amin'ny Ranomasimbe Indiana Andrefana amin'ny alalan'ny fanamafisana ny fahaiza-manao, ny fifampizarana tahiry, ary ny fanavaozana ny fitambaram-bokatra ao amin'ny tahirin-java-maniry.
 
 ![VARUNA Funder Logo](/wioi-duplicate-finder-docs/funders.png)
 

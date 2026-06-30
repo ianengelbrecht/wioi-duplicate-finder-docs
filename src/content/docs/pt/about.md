@@ -15,10 +15,10 @@ O espaço de trabalho principal de captura de dados do Localizador de Duplicatas
 
 ## Informações sobre Financiadores
 
-Esta ferramenta foi desenvolvida no âmbito do programa de biodiversidade [**VARUNA**](https://varuna-biodiversite.org/):
+Esta ferramenta foi desenvolvida para o Réseau d'herbiers de l'océan Indien occidental (RHOIO, Rede de Herbários do Oceano Índico Ocidental) no âmbito do programa de biodiversidade [**VARUNA**](https://varuna-biodiversite.org/):
 - **Financiado por**: Agência Francesa de Desenvolvimento (AFD - Agence Française de Développement).
 - **Implementado por**: Expertise France.
-- **Objetivo**: O VARUNA visa preservar a rica e única biodiversidade das ilhas do Oceano Índico Ocidental (WIOI) por meio do fortalecimento de capacidades, compartilhamento de dados e modernização de coleções de herbários.
+- **Objetivo**: O VARUNA visa preservar a rica e única biodiversidade das ilhas do Oceano Índico Ocidental por meio do fortalecimento de capacidades, compartilhamento de dados e modernização de coleções de herbários.
 
 ![Logotipo do Financiador VARUNA](/wioi-duplicate-finder-docs/funders.png)
 
