@@ -14,7 +14,12 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      title: 'Herbarium Specimen Duplicate Finder',
+      title: {
+        en: 'Herbarium Specimen Duplicate Finder',
+        fr: 'Chercheur de doublons d\'échantillons d\'herbier',
+        pt: 'Localizador de Duplicatas de Amostras de Herbário',
+        mg: 'Mpikaroka Duplicate amin\'ny Santionany Herbarium',
+      },
       favicon: '/favicon.png',
       logo: {
         src: './src/assets/logo.png',
@@ -40,18 +45,18 @@ export default defineConfig({
       },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/ianengelbrecht/wioi-duplicate-finder-docs' }],
       sidebar: [
-        { label: 'Home', link: '/' },
-        { label: 'About', link: '/about' },
-        { label: 'Installation', link: '/installation' },
+        { label: 'Home', translations: { en: 'Home', fr: 'Accueil', pt: 'Início', mg: 'Fandraisana' }, link: '/' },
+        { label: 'About', translations: { en: 'About', fr: 'À propos', pt: 'Sobre', mg: 'Momba' }, link: '/about' },
+        { label: 'Installation', translations: { en: 'Installation', fr: 'Installation', pt: 'Instalação', mg: 'Fametrahana' }, link: '/installation' },
         {
-          label: 'Docs', items: [
-            { label: 'Sign up / Sign in', link: '/docs/signin' },
-            { label: 'Application Settings', link: '/docs/settings' },
-            { label: 'Switching Languages', link: '/docs/languages' },
-            { label: 'Capture Sessions', link: '/docs/sessions' },
-            { label: 'Searching Records', link: '/docs/searching' },
-            { label: 'Selecting & Editing', link: '/docs/editing' },
-            { label: 'Exporting Data', link: '/docs/exporting' },
+          label: 'Usage', translations: { en: 'Usage', fr: 'Utilisation', pt: 'Uso', mg: 'Fampiasana' }, items: [
+            { label: 'Sign up / Sign in', translations: { en: 'Sign up / Sign in', fr: 'S\'inscrire / Se connecter', pt: 'Registrar / Entrar', mg: 'Hisoratra anarana / Hidirana' }, link: '/docs/signin' },
+            { label: 'Application Settings', translations: { en: 'Application Settings', fr: 'Paramètres de l\'application', pt: 'Configurações do Aplicativo', mg: 'Fikirakirana ny Fampiharana' }, link: '/docs/settings' },
+            { label: 'Switching Languages', translations: { en: 'Switching Languages', fr: 'Changer de langue', pt: 'Alterar Idiomas', mg: 'Mifamadika Fiteny' }, link: '/docs/languages' },
+            { label: 'Capture Sessions', translations: { en: 'Capture Sessions', fr: 'Sessions de capture', pt: 'Sessões de Captura', mg: 'Fivoriana Fandraisana' }, link: '/docs/sessions' },
+            { label: 'Searching Records', translations: { en: 'Searching Records', fr: 'Recherche de dossiers', pt: 'Pesquisando Registros', mg: 'Mitady Rakitra' }, link: '/docs/searching' },
+            { label: 'Selecting & Editing', translations: { en: 'Selecting & Editing', fr: 'Sélection et édition', pt: 'Selecionando e Editando', mg: 'Misafidy & Manova' }, link: '/docs/editing' },
+            { label: 'Exporting Data', translations: { en: 'Exporting Data', fr: 'Exportation de données', pt: 'Exportando Dados', mg: 'Manondrana Data' }, link: '/docs/exporting' },
           ]
         }
       ],
