@@ -48,6 +48,7 @@ export default defineConfig({
         { label: 'Home', translations: { en: 'Home', fr: 'Accueil', pt: 'Início', mg: 'Fandraisana' }, link: '/' },
         { label: 'About', translations: { en: 'About', fr: 'À propos', pt: 'Sobre', mg: 'Momba' }, link: '/about' },
         { label: 'Installation', translations: { en: 'Installation', fr: 'Installation', pt: 'Instalação', mg: 'Fametrahana' }, link: '/installation' },
+        { label: 'Data preparation', translations: { en: 'Data preparation', fr: 'Préparation des données', pt: 'Preparação de Dados', mg: 'Fikarakarana Data' }, link: '/data-prep' },
         {
           label: 'Usage', translations: { en: 'Usage', fr: 'Utilisation', pt: 'Uso', mg: 'Fampiasana' }, items: [
             { label: 'Sign up / Sign in', translations: { en: 'Sign up / Sign in', fr: 'S\'inscrire / Se connecter', pt: 'Registrar / Entrar', mg: 'Hisoratra anarana / Hidirana' }, link: '/docs/signin' },
