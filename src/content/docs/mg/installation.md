@@ -3,33 +3,44 @@ title: Fametrahana
 description: Torolàlana momba ny fampidinana sy ny fametrahana
 ---
 
-## Fametrahana
-
-Mba hametrahana ny Fitaovana Fikarohana Dika Mitovy dia mila mampidina rakitra roa ianao: ny fametrahana fampiharana (installer) sy ny rakitra tahirin-kevitra (database) izay hiarahan'ny fampiharana miasa. Eto ambany ny rohy fampidinana, fidio ny tahirin-kevitra sahaza ho an'ny faritra misy anao. 
+Mba hanombohana amin'ny Fitaovana Fikarohana Dika Mitovy (Duplicate Finder) dia mila mampidina zavatra telo ianao: ny fametrahana fampiharana (installer), kopian'ny taksonomia World Checklist of Vascular Plants (WCVP), ary ny tahirin-kevitra specimen (reference dataset) ho an'ny faritra misy anao. Eto ambany ny rohy fampidinana ho an'ny tsirairay amin'ireo. 
 
 #### Dingana 1: Ampidino ny fametrahana fampiharana
 
 [Fametrahana fampiharana (Application installer)](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
 
-#### Dingana 2: Fidio sy ampidino ny tahirin-kevitra ho an'ny faritra misy anao
+Nampidirinay eto ambany ny torolàlana tsikelikely momba ny fomba fandefasana ity fametrahana ity rehefa vita ny fampidinanao.
 
+#### Dingana 2: Ampidino ny tahirin-kevitra WCVP farany indrindra
+
+Afaka alaina <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">eto ny tahirin-kevitra WCVP farany indrindra</a>. Tsindrio ilay rohy `wcvp.zip` mba hampidinana azy, ary avy eo vahao (unzip) ilay rakitra amin'ny solosainao. WCVP dia ny rafitra taksonomika ofisialy ao ambadiky ny tranonkala <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>.  
+
+#### Dingana 3: Fidio ary ampidino ny tahirin-kevitra (rakitra CSV) ho an'ny faritra misy anao
+
+TODO: update these links
+Fidio sy ampidino ny tahirin-kevitra ho an'ny faritra misy anao avy amin'ny lisitra eto ambany. (Afaka mampidina faritra maromaro ianao raha toa ka mandrakotra izany ny fanangonanao). Voafintina (zipped) ireo tahirin-kevitra ireo, ka mila mamaha azy ianao aorian'ny fampidinana. 
 - [Nosy ao amin'ny Ranomasimbe Indiana Andrefana](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
 - Afrika Atsimo (ho avy tsy ho ela...)
 
-Voafintina (zipped) ny tahirin-kevitra, ka mila mamaha azy ianao (unzip) ary mamindra ny rakitra `.db` amin'ny toerana mety amin'ny solosainao alohan'ny hanombohanao miasa aminy (o.hat. ao amin'ny lahatahiry Documents-nao). 
+---
 
-Avy eo, tsindrio indroa ilay fametrahana fampiharana (installer) mba hanombohana ny fametrahana. Haneho sary manga milaza izy fa niaro ny solosainao ny Windows (Windows protected your PC). Eto ianao dia afaka manindry ny «Mombamomba bebe kokoa» (More Info), ary avy eo ny «Hametraka ihany» (Run Anyway). Handeha ny fametrahana, ary afaka manaiky ny safidy rehetra efa napetraka (default) ianao mandritra ny fametrahana.
+### Fametrahana ny Fampiharana
+
+Rehefa voasintona ireo rakitra ireo, tsindrio indroa ilay fametrahana fampiharana (`.exe`) mba hanombohana ny fametrahana.
+
+Koa satria tsy voasonia amin'ny taratasy fanamarinana ara-barotra ny fampiharana, ny Windows SmartScreen dia haneho sary fampitandremana manga milaza fa **niaro ny solosainao ny Windows (Windows protected your PC)**. Aza manahy! Tsindrio ny **More info**, ary avy eo tsindrio ny **Run anyway** mba hanohizana.
 
 ![Sary Manga Fametrahana](/wioi-duplicate-finder-docs/blue-screen.png)
-Tsindrio ny «More Info», ary avy eo ny «Run Anyway»
+<span style="font-size: 80%;">Tsindrio ny «More info», ary avy eo ny «Run anyway».</span>
+
+Handeha ilay fametrahana fampiharana, ary azonao ekena fotsiny ny safidy efa napetraka (default options) mba hamitana ny fametrahana.
 
 ![Fametrahana](/wioi-duplicate-finder-docs/installer.png)
-Tsindrio ny «Next» hatramin'ny farany amin'ny fametrahana mba hifidianana ny safidy efa napetraka. 
+<span style="font-size: 80%;">Tsindrio ny «Next» hatramin'ny farany mba hifidianana ny safidy efa napetraka.</span>
 
-Rehefa mandeha voalohany ny fampiharana, dia hanontany anao ny toerana hisy ny tahirin-kevitra izy. Tadiavo ary fidio ilay rakitra tahirin-kevitra izay nalainao sy novahanao teo. Amin'ny fotoana voalohany handehanan'ny fampiharana ihany no mila manao izany ianao (ankoatra ny hoe afindranao indray ilay rakitra tahirin-kevitra aorian'izay).  
+Raha vao mandeha voalohany ny fampiharana dia hitondra anao ho azy any amin'ny pejin'ny fandrindrana (settings screen) izany. Mila manafatra (import) ilay rakitra WCVP (`wcvp_names.csv`) sy ny tahirin-kevitra ho an'ny faritra misy anao (`occurrence_final.csv`) ianao vao afaka mikaroka dika mitovy na mampiditra specimen. Raha mila fanampiana amin'ity dingana ity ianao dia jereo ny [pejin'ny fandrindrana](./docs/settings).
 
-Mariho fa rehefa mampiasa ny fametrahana ianao, dia hisy sary manga hiseho hanontany raha matoky ny mpamorona ianao mba hametrahana izany.
+### Fanavaozana ny fampiharana
 
-## Fanavaozana ny fampiharana
-
-Rehefa tafapetraka ny fampiharana, dia manamarina ho azy ny fanavaozana isaky ny mandeha izy (mila fifandraisana aterineto izany). Raha mahita fanavaozana izy, dia hisy bokotra hiseho eo anilan'ny fisafidianana fiteny manasa anao hampidina sy hametraka ny fanavaozana. Mitranga ho azy ny fanavaozana ary hanomboka indray ny fampiharana rehefa vita izany.
+Rehefa tafapetraka ny fampiharana, dia manamarina ho azy ny fanavaozana isaky ny manokatra azy ianao (raha manana fifandraisana aterineto). Raha misy fanavaozana vaovao azo alaina, dia hisy bokotra fampahafantarana hiseho eo ambony eo anilan'ny fisafidianana fiteny.
+Ny fanindriana io bokotra io dia hampidina sy hametraka ny fanavaozana any ambadika, ary hanomboka ho azy indray ny fampiharana rehefa vita izany.

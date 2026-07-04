@@ -3,33 +3,45 @@ title: Instalação
 description: Instruções de download e instalação
 ---
 
-## Instalação
-
-Para instalar o Localizador de Duplicatas, você precisará baixar dois arquivos: o instalador do aplicativo e um arquivo de banco de dados com o qual o aplicativo funcionará. Os links para download estão abaixo, escolha o banco de dados apropriado para a sua região. 
+Para começar a usar o Localizador de Duplicatas (Duplicate Finder), você precisará baixar três itens: o instalador do aplicativo, uma cópia da taxonomia do World Checklist of Vascular Plants (WCVP) e um conjunto de dados de referência de espécimes para a sua região. Os links para download de cada um estão abaixo. 
 
 #### Etapa 1: Baixe o instalador do aplicativo
 
 [Instalador do aplicativo](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
 
-#### Etapa 2: Selecione e baixe um banco de dados para a sua região
+Incluímos instruções passo a passo abaixo sobre como executar o instalador assim que o download for concluído.
 
+#### Etapa 2: Baixe os dados mais recentes do WCVP
+
+Os dados mais recentes do WCVP estão <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">disponíveis aqui</a>. Clique no link `wcvp.zip` para baixá-lo e depois descompacte o arquivo no seu computador. O WCVP é a base taxonômica oficial por trás do portal <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>.  
+
+#### Etapa 3: Selecione e baixe um conjunto de dados de referência (arquivo CSV) para a sua região
+
+TODO: update these links
+Selecione e baixe o conjunto de dados de referência da sua região na lista abaixo. (Sinta-se à vontade para baixar várias regiões se a sua coleção abranger mais de uma). Esses conjuntos de dados estão compactados (zip), então você precisará descompactá-los após o download. 
 - [Ilhas do Oceano Índico Ocidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
 - África Austral (em breve...)
 
-O banco de dados está compactado (zip), então você precisa descompactá-lo e mover o arquivo `.db` para um local adequado em seu computador antes de começar a trabalhar com ele (por exemplo, sua pasta Documentos). 
+---
 
-Em seguida, clique duas vezes no instalador do aplicativo para iniciar o processo de instalação. Ele mostrará uma tela azul informando que o Windows protegeu o seu computador. Aqui você pode clicar em «Mais informações» (More Info) e depois em «Executar assim mesmo» (Run Anyway). O instalador será executado e você poderá aceitar todas as opções padrão durante a instalação.
+### Instalando o Aplicativo
+
+Depois de baixar os arquivos, clique duas vezes no instalador do aplicativo (`.exe`) para iniciar a instalação.
+
+Como o aplicativo não está assinado com um certificado comercial, o Windows SmartScreen mostrará uma tela de aviso azul dizendo **O Windows protegeu o seu computador**. Não se preocupe! Clique em **Mais informações** (More info) e depois em **Executar assim mesmo** (Run anyway) para prosseguir.
 
 ![Tela Azul de Instalação](/wioi-duplicate-finder-docs/blue-screen.png)
-Clique em Mais informações (More Info) e depois em Executar assim mesmo (Run Anyway)
+<span style="font-size: 80%;">Clique em Mais informações (More info) e depois em Executar assim mesmo (Run anyway).</span>
+
+O instalador será executado e você poderá simplesmente aceitar as opções padrão para concluir a instalação.
 
 ![Instalador](/wioi-duplicate-finder-docs/installer.png)
-Clique em Avançar (Next) em todas as etapas do instalador para selecionar as opções padrão. 
+<span style="font-size: 80%;">Clique em Avançar (Next) em todas as etapas do instalador para selecionar as opções padrão.</span>
 
-Quando você executar o aplicativo pela primeira vez, ele perguntará onde está o banco de dados. Navegue até o arquivo de banco de dados que você baixou e descompactou e selecione-o. Você só precisará fazer isso na primeira vez que o aplicativo for executado (a menos que mova o arquivo de banco de dados novamente depois).  
+A primeira vez que você executar o aplicativo, ele o levará automaticamente para a tela de configurações. Você precisará importar o arquivo do WCVP (`wcvp_names.csv`) e o conjunto de dados de referência da sua região (`occurrence_final.csv`) antes de poder pesquisar duplicatas ou registrar espécimes. Se precisar de ajuda com esta etapa, confira a [página de configurações](./docs/settings).
 
-Observe que ao executar o instalador, você verá uma tela azul perguntando se confia no editor para realizar a instalação.
+### Atualizações do aplicativo
 
-## Atualizações do aplicativo
+Uma vez instalado, o aplicativo verificará automaticamente se há atualizações sempre que você o abrir (desde que tenha uma conexão ativa com a internet). Se uma nova atualização estiver disponível, um botão de atualização aparecerá no cabeçalho superior, ao lado do seletor de idioma.
 
-Uma vez instalado, o aplicativo verifica automaticamente se há atualizações sempre que é iniciado (isso requer uma conexão com a internet). Se encontrar uma atualização, exibirá um botão ao lado do seletor de idioma oferecendo para você baixar e instalar a atualização. A atualização ocorre automaticamente e o aplicativo será reiniciado quando for concluída.
+Clicar nesse botão fará o download e instalará a atualização em segundo plano, e o aplicativo será reiniciado automaticamente assim que for concluído.

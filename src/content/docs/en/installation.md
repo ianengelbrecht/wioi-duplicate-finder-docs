@@ -3,39 +3,45 @@ title: Installation
 description: Download and installation instructions
 ---
 
-## Installation
-
-To install the Duplicate Finder you will need to download three files, the application installer, a copy of the World Catalog of Vascular Plants (WCVP) taxonomy, and a dataset with reference records (duplicates) for your area or region. Download links are below. 
+To get started with the Duplicate Finder, you'll need to download three things: the application installer, a copy of the World Checklist of Vascular Plants (WCVP) taxonomy, and a reference specimen dataset for your region. You can find the links for each of these below. 
 
 #### Step 1: Download the application installer
 
 [Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
-The instructions below indicate how to install the application once you've downloaded it.
+
+We've included step-by-step instructions below on how to run this installer once your download completes.
 
 #### Step 2: Download the latest WCVP data
-WCVP data are <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">available here</a>. Click on the 'wcvp.zip' link there to download it and then unzip it. WCVP is the database behind the <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a> website.  
+
+The latest WCVP data is <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">available here</a>. Click on the `wcvp.zip` link to download it, and then unzip the archive on your computer. WCVP is the official taxonomic backbone behind the <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a> portal.  
 
 #### Step 3: Select and download a reference dataset (CSV file) for your region
 
 TODO: update these links
-Select your region below. You can download data for more than one region if necessary. The dataset is zipped, so you need to unzip it also. 
+Select and download your region's reference dataset from the list below. (You're welcome to download multiple regions if your collection covers them). These datasets are zipped, so you'll need to unzip them after downloading. 
 - [West Indian Ocean Islands](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
 - Southern Africa (coming soon...)
 
-Once you have these files, double click the application installer to start the installation process. It will show you a blue screen saying Windows protected your PC. Here you can click on More Info, and then Install Anyway. The installer will run, you can accept all default options during the installation.
+---
+
+### Installing the Application
+
+Once you've downloaded the files, double-click the application installer (`.exe`) to start installing.
+
+Because the app is not signed with a commercial certificate, Windows SmartScreen will show a blue warning screen saying **Windows protected your PC**. Don't worry! Click **More info**, and then click **Run anyway** to proceed.
 
 ![Installation Blue Screen](/wioi-duplicate-finder-docs/blue-screen.png)
 <span style="font-size: 80%;">Click on More Info, and then on Run Anyway.</span>
 
+The installer will run, and you can simply accept the default options to complete the installation.
 
 ![Installer](/wioi-duplicate-finder-docs/installer.png)
 <span style="font-size: 80%;">Click Next all the way through with the installer to select default options.</span>
 
-When you run the app for the first time it will take you to the settings screen automatically, and you will need to import the WCVP and reference datasets before you will be able to start using using it. See help the [settings page](./docs/settings#) if needed.
+The first time you run the app, it will automatically take you to the settings screen. You'll need to import the WCVP file (`wcvp_names.csv`) and your region's reference dataset (`occurrence_final.csv`) before you can search for duplicates or capture records. If you need a hand with this step, check out the [settings page](./docs/settings).
 
-Note that when you run the installer you will get a blue screen asking if you trust the publisher to install.
+### App updates
 
-## App updates
+Once installed, the app will automatically check for updates every time you open it (as long as you have an active internet connection). If a new update is available, a notification button will appear in the top header next to the language selector.
 
-Once installed, the app automatically checks for updates every time you start it (this needs an internet connection). If it finds an update it will display a button next to the language selector offering for you to download and install the update. The update happens automatically and the app will restart when it is completed. 
-
+Clicking this button will download and install the update in the background, and the app will restart automatically once it's finished.
