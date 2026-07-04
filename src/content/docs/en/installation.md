@@ -19,7 +19,7 @@ The latest WCVP data is <a href="https://sftp.kew.org/pub/data-repositories/WCVP
 
 TODO: update these links
 Select and download your region's reference dataset from the list below. (You're welcome to download multiple regions if your collection covers them). These datasets are zipped, so you'll need to unzip them after downloading. 
-- [West Indian Ocean Islands](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- [West Indian Ocean Islands](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
 - Southern Africa (coming soon...)
 
 ---

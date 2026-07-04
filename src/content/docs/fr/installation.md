@@ -19,7 +19,7 @@ Les dernières données du WCVP sont <a href="https://sftp.kew.org/pub/data-repo
 
 TODO: update these links
 Sélectionnez et téléchargez le jeu de données de référence pour votre région dans la liste ci-dessous. (Vous pouvez télécharger plusieurs régions si votre collection le nécessite). Ces jeux de données sont zippés, vous devrez donc également les décompresser après le téléchargement. 
-- [Îles de l'océan Indien occidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- [Îles de l'océan Indien occidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
 - Afrique australe (bientôt disponible...)
 
 ---

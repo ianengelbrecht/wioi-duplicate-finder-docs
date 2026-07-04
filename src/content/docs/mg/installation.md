@@ -19,7 +19,7 @@ Afaka alaina <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="
 
 TODO: update these links
 Fidio sy ampidino ny tahirin-kevitra ho an'ny faritra misy anao avy amin'ny lisitra eto ambany. (Afaka mampidina faritra maromaro ianao raha toa ka mandrakotra izany ny fanangonanao). Voafintina (zipped) ireo tahirin-kevitra ireo, ka mila mamaha azy ianao aorian'ny fampidinana. 
-- [Nosy ao amin'ny Ranomasimbe Indiana Andrefana](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- [Nosy ao amin'ny Ranomasimbe Indiana Andrefana](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
 - Afrika Atsimo (ho avy tsy ho ela...)
 
 ---

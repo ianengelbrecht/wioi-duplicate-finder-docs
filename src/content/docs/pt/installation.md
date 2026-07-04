@@ -19,7 +19,7 @@ Os dados mais recentes do WCVP estão <a href="https://sftp.kew.org/pub/data-rep
 
 TODO: update these links
 Selecione e baixe o conjunto de dados de referência da sua região na lista abaixo. (Sinta-se à vontade para baixar várias regiões se a sua coleção abranger mais de uma). Esses conjuntos de dados estão compactados (zip), então você precisará descompactá-los após o download. 
-- [Ilhas do Oceano Índico Ocidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.0/wioi-reference-db-wioi-v0.6.0.zip)
+- [Ilhas do Oceano Índico Ocidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
 - África Austral (em breve...)
 
 ---
