@@ -85,7 +85,7 @@ Several of the form fields use the local reference database to suggest values wh
 
 ## Field-by-Field Reference
 
-Below is a detailed guide to all 29 fields on the capture form. The field names are the internal Darwin Core field names that the application uses, and are likely to be different in your export data format to match your own database field names (this is the purpose of a data standard like Darwin Core).
+Below is a detailed guide to all 35 fields on the capture form. The field names are the internal Darwin Core field names that the application uses, and are likely to be different in your export data format to match your own database field names (this is the purpose of a data standard like Darwin Core).
 
 | Field Name | Labeled As | Type | Description / Autocomplete Rules |
 | :--- | :--- | :--- | :--- |
@@ -105,6 +105,8 @@ Below is a detailed guide to all 29 fields on the capture form. The field names 
 | **stateProvince** | Admin 2 | Autocomplete | Primary country subregion (state/province/region). Reuses database values and filtered by chosen country. Supports title-casing. |
 | **county** | Admin 3 | Autocomplete | Secondary subregion (county/district). Filtered by country and Admin 2. Supports title-casing. |
 | **municipality** | Admin 4 | Autocomplete | Third subregion, filtered by country, Admin 2, and Admin 3. Supports title-casing. |
+| **islandGroup** | Island Group | Autocomplete | The group of islands where the specimen was collected (e.g., `Mascarenes`). Filtered by country. Supports paste and title-casing helpers. |
+| **island** | Island | Autocomplete | Name of the specific island (e.g., `Mauritius`). Filtered by country and Island Group. Supports paste and title-casing helpers. |
 | **locality** | Locality | Textarea | Collection place name. Supports copy, paste, and title-casing helpers. Partial search looks up existing values from the database. |
 | **cultivated** | Cultivated | Checkbox | Check this if the specimen was collected from cultivation, such as botanic garden. Not a Darwin Core field but important for herbarium specimens. |
 | **verbatimCoordinates** | Verbatim Coordinates | Text | Coordinates as written on label. Parsed to decimal coordinates by application and displays error badge if invalid. |

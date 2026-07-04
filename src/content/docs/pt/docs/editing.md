@@ -85,7 +85,7 @@ Vários campos do formulário usam o banco de dados de referência local para su
 
 ## Referência de Campo por Campo
 
-Abaixo está um guia detalhado para todos os 29 campos no formulário de captura. Os nomes dos campos são os nomes internos do Darwin Core que o aplicativo usa, e provavelmente serão diferentes no formato de exportação de dados para corresponder aos nomes dos campos do seu próprio banco de dados (este é o propósito de um padrão de dados como o Darwin Core).
+Abaixo está um guia detalhado para todos os 35 campos no formulário de captura. Os nomes dos campos são os nomes internos do Darwin Core que o aplicativo usa, e provavelmente serão diferentes no formato de exportação de dados para corresponder aos nomes dos campos do seu próprio banco de dados (este é o propósito de um padrão de dados como o Darwin Core).
 
 | Nome do Campo | Rotulado Como | Tipo | Descrição / Regras de Preenchimento Automático |
 | :--- | :--- | :--- | :--- |
@@ -105,6 +105,8 @@ Abaixo está um guia detalhado para todos os 29 campos no formulário de captura
 | **stateProvince** | Admin 2 | Preenchimento automático | Sub-região principal do país (estado/província/região). Reutiliza valores do banco de dados e é filtrado pelo país selecionado. Suporta formatação de maiúsculas/minúsculas. |
 | **county** | Admin 3 | Preenchimento automático | Sub-região secundária (condado/distrito). Filtrado por país e Admin 2. Suporta formatação de maiúsculas/minúsculas. |
 | **municipality** | Admin 4 | Preenchimento automático | Terceira sub-região, filtrada por país, Admin 2 e Admin 3. Suporta formatação de maiúsculas/minúsculas. |
+| **islandGroup** | Grupo de Ilhas | Preenchimento automático | O grupo de ilhas onde o espécime foi coletado (ex. `Mascarenhas`). Filtrado pelo país. Suporta colar e auxiliares de formatação de maiúsculas/minúsculas. |
+| **island** | Ilha | Preenchimento automático | Nome da ilha específica (ex. `Maurício`). Filtrado pelo país e Grupo de Ilhas. Suporta colar e auxiliares de formatação de maiúsculas/minúsculas. |
 | **locality** | Localidade | Área de texto | Nome do local de coleta. Suporta auxiliares de copiar, colar e formatar maiúsculas/minúsculas. A busca parcial consulta valores existentes no banco de dados. |
 | **cultivated** | Cultivado | Caixa de seleção | Marque se o espécime foi coletado de cultivo, como um jardim botânico. Não é um campo Darwin Core, mas é importante para espécimes de herbário. |
 | **verbatimCoordinates** | Coordenadas Textuais | Texto | Coordenadas conforme escritas no rótulo. Analisadas para coordenadas decimais pelo aplicativo; exibe um distintivo de erro se forem inválidas. |

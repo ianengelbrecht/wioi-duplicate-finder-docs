@@ -85,7 +85,7 @@ Plusieurs champs du formulaire utilisent la base de données de référence loca
 
 ## Référence champ par champ
 
-Voici un guide détaillé des 29 champs du formulaire de saisie. Les noms des champs sont les noms de champs internes Darwin Core que l'application utilise, et ils peuvent être différents dans votre format d'exportation de données pour correspondre aux noms de champs de votre propre base de données (c'est l'objectif d'une norme de données comme Darwin Core).
+Voici un guide détaillé des 35 champs du formulaire de saisie. Les noms des champs sont les noms de champs internes Darwin Core que l'application utilise, et ils peuvent être différents dans votre format d'exportation de données pour correspondre aux noms de champs de votre propre base de données (c'est l'objectif d'une norme de données comme Darwin Core).
 
 | Nom du champ | Libellé dans le formulaire | Type | Description / Règles d'auto-complétion |
 | :--- | :--- | :--- | :--- |
@@ -105,6 +105,8 @@ Voici un guide détaillé des 29 champs du formulaire de saisie. Les noms des ch
 | **stateProvince** | L'Admin 2 | Auto-complétion | Sous-région principale du pays (état/province/région). Réutilise les valeurs de la base de données et est filtrée par le pays choisi. Prend en charge la casse des titres. |
 | **county** | L'Admin 3 | Auto-complétion | Sous-région secondaire (comté/district). Filtrée par pays et Admin 2. Prend en charge la casse des titres. |
 | **municipality** | L'Admin 4 | Auto-complétion | Troisième sous-région, filtrée par pays, Admin 2 et Admin 3. Prend en charge la casse des titres. |
+| **islandGroup** | Archipel/Groupe d'îles | Auto-complétion | Le groupe d'îles ou l'archipel où le spécimen a été collecté (par ex. `Mascareignes`). Filtré par pays. Prend en charge le collage et les assistants de casse des titres. |
+| **island** | Île | Auto-complétion | Nom de l'île spécifique (par ex. `Maurice`). Filtré par pays et Groupe d'îles. Prend en charge le collage et les assistants de casse des titres. |
 | **locality** | Localité | Zone de texte | Nom du lieu de collecte. Prend en charge la copie, le coller et les assistants de casse des titres. La recherche partielle recherche les valeurs existantes dans la base de données. |
 | **cultivated** | cultivé | Case à cocher | Cochez cette case si le spécimen a été collecté à partir de cultures, comme dans un jardin botanique. Ce n'est pas un champ Darwin Core mais il est important pour les spécimens d'herbier. |
 | **verbatimCoordinates** | Coordonnées textuelles | Texte | Coordonnées telles qu'écrites sur l'étiquette. Analysées en coordonnées décimales par l'application et affichent un badge d'erreur si elles sont invalides. |

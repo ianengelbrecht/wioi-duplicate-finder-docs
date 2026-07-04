@@ -81,11 +81,9 @@ Maro amin'ireo faritra ao amin'ny takelaka no mampiasa ny tahirin-kevitra fototr
 - **Fampidirana Sokajy (Taxa) Manokana**: 
   Raha toa ka karazana zava-maniry (species) tsy hita ao amin'ny tahirin-kevitra WCVP ny santiona iray (toy ny karazany vaovao, cultivar, na anarana sora-tanana), dia **tsy sakanana** ianao. Azonao atao fotsiny ny manoratra ny anarana vaovao sy mitahiry ny firaketana. Any aoriana, ny tahirin-kevitra dia mitahiry ny WCVP taxonID ho an'ny anarana efa misy (ary mamoaka izany raha ilaina). Ny anarana vaovao kosa dia tsy hisy sanda ao amin'ny `taxonID`.
 
----
-
 ## Mombamomba ny Faritra Tsirairay
 
-Etsy ambany dia misy tari-dalana amin'ny antsipiriany ho an'ireo faritra 29 ao amin'ny takelaka fitahirizana santiona. Ny anaran'ny faritra dia ny anaran'ny faritra Darwin Core anaty ampiasain'ny fampiharana, ary mety ho samy hafa amin'ny endrika famoahana data mifanaraka amin'ny anaran'ny faritra ao amin'ny tahirin-kevitrao manokana (izany indrindra no tanjon'ny fenitra angon-drakitra toy ny Darwin Core).
+Etsy ambany dia misy tari-dalana amin'ny antsipiriany ho an'ireo faritra 35 ao amin'ny takelaka fitahirizana santiona. Ny anaran'ny faritra dia ny anaran'ny faritra Darwin Core anaty ampiasain'ny fampiharana, ary mety ho samy hafa amin'ny endrika famoahana data mifanaraka amin'ny anaran'ny faritra ao amin'ny tahirin-kevitrao manokana (izany indrindra no tanjon'ny fenitra angon-drakitra toy ny Darwin Core).
 
 | Anaran'ny Faritra | Hita ho | Karazany | Famaritana / Fitsipika Famenoana ho Azy |
 | :--- | :--- | :--- | :--- |
@@ -105,6 +103,8 @@ Etsy ambany dia misy tari-dalana amin'ny antsipiriany ho an'ireo faritra 29 ao a
 | **stateProvince** | Admin 2 | Mameno ho azy | Faritra voalohany ao amin'ny firenena (faritany/faritra). Mampiasa sanda efa ao amin'ny tahirin-kevitra ary voasivana araka ny firenena nosafidiana. Manohana fanoratana manomboka amin'ny litera lehibe. |
 | **county** | Admin 3 | Mameno ho azy | Zana-paritra faharoa (kaominina/distrika). Voasivana araka ny firenena sy ny Admin 2. Manohana fanoratana manomboka amin'ny litera lehibe. |
 | **municipality** | Admin 4 | Mameno ho azy | Zana-paritra fahatelo, voasivana araka ny firenena, Admin 2, ary Admin 3. Manohana fanoratana manomboka amin'ny litera lehibe. |
+| **islandGroup** | Vondron'ny Nosy | Mameno ho azy | Ny vondron'ny nosy izay nahitana ilay santiona (o.hat. `Mascarenes`). Voasivana araka ny firenena. Manohana fampidirana sy mpanampy amin'ny fanoratana amin'ny litera lehibe. |
+| **island** | Nosy | Mameno ho azy | Ny anaran'ny nosy voafaritra tsara (o.hat. `Maorisy`). Voasivana araka ny firenena sy ny Vondron'ny Nosy. Manohana fampidirana sy mpanampy amin'ny fanoratana amin'ny litera lehibe. |
 | **locality** | Toerana | Faritra lahatsoratra | Anaran'ny toerana nanangonana. Manohana mpanampy amin'ny fandikana, fampidirana, ary fanoratana amin'ny litera lehibe. Ny fikarohana ampahany dia mikaroka sanda efa misy ao amin'ny tahirin-kevitra. |
 | **cultivated** | Volena | Checkbox | Mariho ity raha toa ka avy amin'ny fambolena ny santiona voangona, toy ny avy amin'ny zaridaina botanika. Tsy faritra Darwin Core fa manan-danja ho an'ny santionan-java-maniry. |
 | **verbatimCoordinates** | Mari-toerana voasoratra | Lahatsoratra | Mari-toerana araka ny nanoratana azy teo amin'ny etikety. Vakina ho desimaly amin'ny alalan'ny fampiharana ary mampiseho mari-pamantarana fahadisoana raha tsy mety. |
