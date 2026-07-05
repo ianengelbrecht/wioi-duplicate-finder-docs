@@ -1,5 +1,8 @@
 ---
 title: Registrar / Entrar
+prev:
+  link: /pt/installation
+  label: Instalação
 ---
 
 O aplicativo usa um **sistema de banco de dados local** para armazenar registros de espécimes e contas de usuário. Todos os dados de login e registros capturados permanecem totalmente offline em seu computador local.

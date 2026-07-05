@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeNova from 'starlight-theme-nova'
+import release from './src/config/release.json';
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,7 +10,7 @@ export default defineConfig({
   base: '/wioi-duplicate-finder-docs',
   vite: {
     define: {
-      'import.meta.env.APP_VERSION': JSON.stringify('0.6.1'),
+      'import.meta.env.APP_VERSION': JSON.stringify(release.version),
     },
   },
   integrations: [
@@ -61,6 +62,9 @@ export default defineConfig({
           ]
         }
       ],
+      components: {
+        Sidebar: './src/components/SidebarWithVersion.astro',
+      },
       plugins: [
         starlightThemeNova(/* options */),
       ],

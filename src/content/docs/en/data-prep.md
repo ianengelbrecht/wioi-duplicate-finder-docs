@@ -1,6 +1,7 @@
 ---
 title: Data preparation
 description: Steps for preparation of reference datasets from GBIF data
+pagination: false
 ---
 
 The Duplicate Finder uses a reference dataset of specimen records from other herbaria, obtained from GBIF. GBIF data isn't perfect: herbaria often publish their data as-is without cleaning (which is fine), and they sometimes don't use the Darwin Core standard consistently (for example, collector numbers might be stored in `dwc:recordedBy` instead of `dwc:recordNumber` or `dwc:fieldNumber`). For this reason, some data preparation steps are needed before a new dataset can be imported into the application. The steps below show the process to follow, and we've provided some scripts and guidance to help you along the way.

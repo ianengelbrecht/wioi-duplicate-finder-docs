@@ -1,5 +1,8 @@
 ---
 title: Hisoratra anarana/Hiditra
+prev:
+  link: /mg/installation
+  label: Fametrahana
 ---
 
 Ny fampiharana dia mampiasa **rafitra tahirin-kevitra eo an-toerana** (local database) hitahirizana ny firaketana santiona sy ny kaontin'ny mpampiasa. Ny angon-drakitra fidirana rehetra sy ny santiona voatahiry dia mijanona ho ivelan'ny aterineto tanteraka ao amin'ny solosainao manokana.

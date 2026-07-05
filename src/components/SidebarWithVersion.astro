@@ -1,0 +1,23 @@
+---
+// src/components/SidebarWithVersion.astro
+import DefaultSidebar from '@astrojs/starlight/components/Sidebar.astro';
+import release from '../config/release.json';
+---
+
+<DefaultSidebar>
+  <slot />
+</DefaultSidebar>
+
+<div class="app-version">
+  Version {release.version}
+</div>
+
+<style>
+  .app-version {
+    margin: 1rem 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--sl-color-hairline-light);
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+  }
+</style>

@@ -1,5 +1,8 @@
 ---
 title: S'inscrire/Se connecter
+prev:
+  link: /fr/installation
+  label: Installation
 ---
 
 L'application utilise un **système de base de données locale** pour stocker les enregistrements de spécimens et les comptes d'utilisateurs. Toutes les données de connexion et les enregistrements saisis restent entièrement hors ligne sur votre ordinateur local.

@@ -1,6 +1,7 @@
 ---
 title: Préparation des données
 description: Étapes pour la préparation des jeux de données de référence à partir des données du GBIF
+pagination: false
 ---
 
 La recherche de doublons (Duplicate Finder) utilise un jeu de données de référence contenant les fiches de spécimens d'autres herbiers, obtenues auprès du GBIF. Les données du GBIF ne sont pas parfaites : les herbiers publient souvent leurs données en l'état, sans nettoyage préalable (ce qui est tout à fait normal), et n'utilisent parfois pas le standard Darwin Core de manière cohérente (par exemple, les numéros de récolte peuvent être stockés dans `dwc:recordedBy` plutôt que dans `dwc:recordNumber` ou `dwc:fieldNumber`). C'est pourquoi certaines étapes de préparation des données sont nécessaires avant de pouvoir importer un nouveau jeu de données dans l'application. Les étapes ci-dessous décrivent le processus à suivre, et nous avons fourni quelques scripts et conseils pour vous aider tout au long du parcours.

@@ -1,5 +1,8 @@
 ---
 title: Sign up/Sign in
+prev:
+  link: /en/installation
+  label: Installation
 ---
 
 The application uses a **local database system** to store specimen records and user accounts. All login data and captured records remain fully offline on your local computer.

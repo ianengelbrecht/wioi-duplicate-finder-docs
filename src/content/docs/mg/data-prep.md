@@ -1,6 +1,7 @@
 ---
 title: Fikarakarana ny tahirin-kevitra
 description: Dingana ho an'ny fikarakarana ny tahirin-kevitra specimen (reference datasets) avy amin'ny GBIF
+pagination: false
 ---
 
 Ny Fitaovana Fikarohana Dika Mitovy (Duplicate Finder) dia mampiasa tahirin-kevitra (reference dataset) misy dika mitovy amin'ny specimen avy amin'ny herbaria hafa, azo avy amin'ny GBIF. Ny tahirin-kevitra GBIF dia tsy tonga lafatra: matetika ny herbaria dia mamoaka ny tahirin-kevitra misy azy ireo araka ny misy azy nefa tsy misy fanadiovana (izay tsy olana), ary indraindray dia tsy mampiasa ny fenitra Darwin Core amin'ny fomba mitovy (o.hat. ny laharan'ny mpanangona dia mety ho voatahiry ao amin'ny `dwc:recordedBy` fa tsy ao amin'ny `dwc:recordNumber` na `dwc:fieldNumber`). Noho裝izany antony izany, misy dingana fikarakarana tahirin-kevitra ilaina alohan'ny hampidirana tahirin-kevitra vaovao ao amin'ny fampiharana. Ny dingana eto ambany dia mampiseho ny fizotran'izany, ary efa nanome scripts sy torolàlana izahay mba hanampiana anao amin'ny lalanao.

@@ -1,6 +1,7 @@
 ---
 title: Preparação de dados
 description: Passos para a preparação de conjuntos de dados de referência a partir de dados do GBIF
+pagination: false
 ---
 
 O Localizador de Duplicatas (Duplicate Finder) usa um conjunto de dados de referência de registros de espécimes de outros herbários, obtidos do GBIF. Os dados do GBIF não são perfeitos: os herbários frequentemente publicam seus dados como estão, sem limpeza (o que é normal), e às vezes não usam o padrão Darwin Core de forma consistente (por exemplo, os números de coletor podem estar armazenados em `dwc:recordedBy` em vez de `dwc:recordNumber` ou `dwc:fieldNumber`). Por esse motivo, algumas etapas de preparação de dados são necessárias antes que um novo conjunto de dados possa ser importado para o aplicativo. As etapas abaixo mostram o processo a ser seguido, e fornecemos alguns scripts e orientações para ajudá-lo ao longo do caminho.

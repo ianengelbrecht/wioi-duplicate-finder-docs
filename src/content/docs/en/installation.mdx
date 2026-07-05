@@ -1,13 +1,24 @@
 ---
 title: Installation
 description: Download and installation instructions
+next:
+  link: /en/docs/signin/
+  label: Sign up / Sign in
 ---
+
+import release from '../../../config/release.json';
 
 To get started with the Duplicate Finder, you'll need to download three things: the application installer, a copy of the World Checklist of Vascular Plants (WCVP) taxonomy, and a reference specimen dataset for your region. You can find the links for each of these below. 
 
 #### Step 1: Download the application installer
 
-[Application installer](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/duplicate-finder_0.6.3_x64-setup.exe)
+Click on the link below to download the installer:
+
+<p>
+  <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}>
+    Application installer
+  </a>
+</p>
 
 We've included step-by-step instructions below on how to run this installer once your download completes.
 
@@ -17,7 +28,6 @@ The latest WCVP data is <a href="https://sftp.kew.org/pub/data-repositories/WCVP
 
 #### Step 3: Select and download a reference dataset (CSV file) for your region
 
-TODO: update these links
 Select and download your region's reference dataset from the list below. (You're welcome to download multiple regions if your collection covers them). These datasets are zipped, so you'll need to unzip them after downloading. 
 - [West Indian Ocean Islands](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
 - Southern Africa (coming soon...)
