@@ -6,6 +6,7 @@ next:
   label: Registrar / Entrar
 ---
 import release from '../../../config/release.json';
+import data from '../../../config/data.json';
 
 Para começar a usar o Localizador de Duplicatas (Duplicate Finder), você precisará baixar três itens: o instalador do aplicativo, uma cópia da taxonomia do World Checklist of Vascular Plants (WCVP) e um conjunto de dados de referência de espécimes para a sua região. Os links para download de cada um estão abaixo. 
 
@@ -28,8 +29,17 @@ Os dados mais recentes do WCVP estão <a href="https://sftp.kew.org/pub/data-rep
 #### Etapa 3: Selecione e baixe um conjunto de dados de referência (arquivo CSV) para a sua região
 
 Selecione e baixe o conjunto de dados de referência da sua região na lista abaixo. (Sinta-se à vontade para baixar várias regiões se a sua coleção abranger mais de uma). Esses conjuntos de dados estão compactados (zip), então você precisará descompactá-los após o download. 
-- [Ilhas do Oceano Índico Ocidental](https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v0.6.3/wioi_reference_br_g_k_mo_p.zip)
-- África Austral (em breve...)
+
+<ul>
+  <li>
+    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}>
+      Ilhas do Oceano Índico Ocidental
+    </a>
+  </li>
+  <li>
+    África Austral (em breve...)
+  </li>
+</ul>
 
 ---
 
