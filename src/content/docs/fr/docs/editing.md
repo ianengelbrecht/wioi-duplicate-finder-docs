@@ -71,6 +71,9 @@ Plusieurs champs du formulaire utilisent la base de données de référence loca
 ### Recherche rapide de noms scientifiques
 - Le champ **Nom scientifique** s'auto-complète en utilisant la liste mondiale des plantes vasculaires de Kew (WCVP v12).
 - Vous pouvez utiliser la recherche partielle (par exemple, taper `ab man` pour suggérer `Abelmoschus manihot`).
+- Ne vous inquiétez pas de mettre à jour les noms obsolètes ou les synonymes ; saisissez l’identification la plus récente indiquée sur le spécimen.
+- Il arrive que le nom figurant sur le spécimen ne corresponde à aucun nom dans WCVP, par exemple les noms « ined. ». Vous pouvez simplement saisir le nom tel qu’il apparaît sur le spécimen ; un avertissement discret indiquera qu’il ne s’agit pas d’un nom WCVP.
+
 
 ### Ajout de nouvelles valeurs partout
 - **Ajout de nouveaux collecteurs (agents)** :

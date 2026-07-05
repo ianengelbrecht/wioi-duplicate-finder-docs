@@ -69,8 +69,10 @@ The **Locality** and **Locality Notes** fields contain custom copy and paste but
 Several of the form fields use the local reference database to suggest values while typing. 
 
 ### Quick Scientific Name Lookups
-- The **Scientific Name** field autocompletes using Kew's World Checklist of Vascular Plants (WCVP v12).
+- The **Scientific Name** field autocompletes using Kew's World Checklist of Vascular Plants (WCVP).
 - You can use partial searching (e.g., typing `ab man` to suggest `Abelmoschus manihot`).
+- Don't worry about updating outdated names or synonyms, capture the most recent identification on the specimen.
+- Sometimes the name on the specimen won't match a name in WCVP, e.g. 'ined' names. You can just type the name in as it is on the specimen (you will see a gentle warning that this is not a WCVP name).
 
 ### Adding New Values Throughout
 - **Adding New Collectors (Agents)**: 

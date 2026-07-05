@@ -71,6 +71,9 @@ Maro amin'ireo faritra ao amin'ny takelaka no mampiasa ny tahirin-kevitra fototr
 ### Fikarohana Anarana Ara-tsiansa Haingana
 - Ny faritra **Anarana Ara-tsiansa** dia mameno ho azy amin'ny alalan'ny fampiasana ny World Checklist of Vascular Plants an'ny Kew (WCVP v12).
 - Azonao ampiasaina ny fikarohana ampahany (o.hat. manoratra `ab man` mba hanolotra `Abelmoschus manihot`).
+- Aza manahy ny amin’ny fanavaozana anarana efa lany andro na anarana mitovy hevitra; soraty ny famantarana farany indrindra hita eo amin’ilay santionany.
+- Indraindray, mety tsy hifanaraka amin’ny anarana ao amin’ny WCVP ny anarana eo amin’ilay santionany, ohatra ny anarana “ined.”. Azonao soratana fotsiny ilay anarana araka izay hita eo amin’ilay santionany; hisy fampitandremana malefaka hiseho fa tsy anarana ao amin’ny WCVP izany.
+
 
 ### Fampidirana Sanda Vaovao
 - **Fampidirana Mpanangona Vaovao (Agents)**: 

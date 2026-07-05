@@ -71,6 +71,8 @@ Vários campos do formulário usam o banco de dados de referência local para su
 ### Consultas Rápidas de Nome Científico
 - O campo **Nome Científico** é preenchido automaticamente usando o World Checklist of Vascular Plants da Kew (WCVP v12).
 - Você pode usar a busca parcial (por exemplo, digitar `ab man` para sugerir `Abelmoschus manihot`).
+- Não se preocupe em atualizar nomes desatualizados ou sinónimos; registe a identificação mais recente indicada no espécime.
+- Por vezes, o nome no espécime não corresponde a um nome no WCVP, por exemplo nomes “ined.”. Pode simplesmente introduzir o nome tal como aparece no espécime; verá um aviso discreto de que não é um nome do WCVP.
 
 ### Adicionando Novos Valores em Todo o Formulário
 - **Adicionando Novos Coletores (Agentes)**:
