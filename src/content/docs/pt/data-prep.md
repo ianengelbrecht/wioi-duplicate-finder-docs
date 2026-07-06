@@ -82,16 +82,32 @@ Se você renomeou algum arquivo, pode executar o script com `-h` em vez do ponto
 
 ### Padronizando coletores
 
-Padronizar os nomes dos coletores é crucial, pois você geralmente pesquisará duplicatas usando o nome e o número do coletor. Os dados do GBIF frequentemente contêm variações e erros de transcrição (como erros de digitação de etiquetas de herbário), portanto, limpar isso torna as pesquisas muito mais confiáveis. 
+Padronizar os nomes dos coletores é crucial, pois você geralmente pesquisará duplicatas usando o nome e o número do coletor. Os dados do GBIF frequentemente contêm variações de grafia e erros de transcrição (como erros de digitação de etiquetas de herbário manuscritas), portanto, limpar isso torna as pesquisas por duplicatas muito mais confiáveis.
 
-Para começar, você precisará de uma lista de todas as combinações exclusivas de coletores do conjunto de dados. O script identificará o coletor principal (le primeiro nome em uma lista de coletores) para cada registro. Fornecemos o `generate_collectors.py` para compilar essa lista. Execute-o com:
-`python "[caminho do repositório]/data-prep/generate_collectors.py" .`
-Isso salva a lista de coletores exclusivos em `occurrence_unique_recorded_by.csv`.
+É importante ressaltar que o resultado não precisa ser completamente perfeito. Foque seu tempo nos nomes que possuem um alto número de registros associados.
 
-Abra o arquivo no Excel, certificando-se de preservar os caracteres especiais (você pode seguir o guia na [página de exportação de dados](./docs/exporting#opening-exported-data-in-excel)). Ordene as linhas no Excel por `primary_collector_lastname` e depois por `record_count`. Isso agrupa as variações do nome de um coletor e mostra as grafias mais frequentes primeiro. Trabalhe nessa lista para padronizar os nomes na coluna `primary_collector_lastname`. Evite incluir iniciais, acentos ou caracteres especiais — o aplicativo precisa de um sobrenome limpo e em letras maiúsculas para correspondência. Se o analisador cometer um erro (como colocar iniciais no campo do sobrenome), basta corrigi-lo manualmente. Você pode consultar um índice ou diretório de coletores botânicos locais para obter orientação. Para conjuntos de dados muito grandes, a limpeza de nomes pode levar algum tempo, mas faz uma enorme diferença na precisão da busca de duplicatas. Certifique-se de não editar a coluna `recordedBy` original — o script precisa dela intacta para mapear suas correções de volta ao conjunto de dados principal. Quando terminar, salve o arquivo. 
+Aqui está um fluxo de trabalho sugerido para padronizar os nomes:
+- **Extrair** uma lista de strings de coletores exclusivas (`dwc:recordedBy`) do conjunto de dados usando o script Python `generate_collectors.py`.
+- **Remover** valores genéricos como `s.n.`, `collector unknown`, `anon`, `agric`, `school`, `botany`, `service`, `flora`, `forest`, `remarks`, etc.
+- **Analisar** as strings de coletores restantes para extrair o coletor principal (usando o analisador do Bionomia.net descrito abaixo).
+- **Converter** caracteres especiais para caracteres normais (por exemplo, usando `normalize()` no OpenRefine v3.10+).
+- **Aparar** (trim) iniciais dos nomes (por exemplo, usando expressões do OpenRefine como `value.replace(/[A-Z\.]+\s/,'').trim()` e `value.replace(/[A-Z\.\s]+$/,'').trim()`).
+- **Filtrar** partículas de nomes (por exemplo, *le*, *la*, *de*, *der*, *van*) e converter para maiúsculas ao corrigi-las.
+- **Limitar** suas verificações aos nomes não verificados (se estiver no OpenRefine, você pode usar um filtro de faceta em maiúsculas como `value == value.toUppercase()`).
+- **Dividir** (split) nos espaços para extrair o sobrenome (nota: isso pode remover sobrenomes compostos sem hífen, os quais você poderá corrigir mais tarde).
+- **Verificar** manualmente pela primeira letra, priorizando nomes com alta contagem de registros (mantendo o filtro de maiúsculas ativado).
+- **Buscar** manualmente por coletores com sobrenomes compostos e corrigi-los onde for necessário.
+- **Filtrar** por nomes que consistem apenas em iniciais e atualizá-los para nomes completos.
+- **Converter** para maiúsculas e remover a pontuação e os espaços.
+- **Exportar** o resultado final limpo para a próxima etapa.
 
-![Data prep codes](/wioi-duplicate-finder-docs/data-prep-collectors-excel.png)
-<span style="font-size: 80%;">Abra o resultado no Excel, vá para a guia Dados, selecione Classificar e ordene por primary_collector_lastname e record_count, como nesta imagem.</span>
+Várias dessas etapas são muito mais fáceis de realizar usando uma ferramenta como o [OpenRefine](https://openrefine.org/).
+
+#### Usando o Analisador de Nomes do Bionomia
+
+Analisar nomes a partir de strings de texto livre é difícil porque não há um formato padrão para a captura de nomes em diferentes herbários. For exemplo, o nome de um coletor pode ser registrado como `IB Pole-Evans`, `I.B. Pole Evans`, `Pole-Evans, I.B.` ou simplesmente `Pole Evans`. As strings de nomes de coletores também podem conter separadores inconsistentes.
+
+Para facilitar isso, podemos usar o mesmo sistema que o [Bionomia.net](https://bionomia.net/) usa para analisar nomes do GBIF. Ele utiliza o `namae`, que é atualmente um dos melhores analisadores de nomes disponíveis (sem equivalentes comparáveis escritos em Python). Por ser escrito em Ruby, requer uma configuração adicional, mas fornecemos [outro repositório com um wrapper de API simples](https://github.com/ianengelbrecht/ruby-name-parser-api) que você pode executar localmente em seu ambiente de limpeza de dados. Chame essa API com a string do nome bruto para receber uma versão analisada mais limpa (que você pode refinar ainda mais).
 
 ### Atualizando o conjunto de dados principal
 

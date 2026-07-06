@@ -60,7 +60,8 @@ export default defineConfig({
             { label: 'Selecting & Editing', translations: { en: 'Selecting & Editing', fr: 'Sélection et édition', pt: 'Selecionando e Editando', mg: 'Misafidy & Manova' }, link: '/docs/editing' },
             { label: 'Exporting Data', translations: { en: 'Exporting Data', fr: 'Exportation de données', pt: 'Exportando Dados', mg: 'Manondrana Data' }, link: '/docs/exporting' },
           ]
-        }
+        },
+        { label: 'Releases', translations: { en: 'Releases', fr: 'Versions', pt: 'Lançamentos', mg: 'Famoahana' }, items: [{ autogenerate: { directory: 'releases' } }] },
       ],
       components: {
         Sidebar: './src/components/SidebarWithVersion.astro',

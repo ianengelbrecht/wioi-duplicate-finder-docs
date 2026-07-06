@@ -82,16 +82,32 @@ Si vous avez renommé certains fichiers, vous pouvez exécuter le script avec `-
 
 ### Standardisation des collecteurs
 
-La standardisation des noms de collecteurs est essentielle, car vous rechercherez généralement les doublons à l'aide du nom et du numéro du collecteur. Les données du GBIF contiennent souvent des variations et des erreurs de transcription (comme des fautes de frappe issues des étiquettes d'herbiers) ; nettoyer ces informations rend les recherches beaucoup mais fiables. 
+La standardisation des noms de collecteurs est essentielle, car vous rechercherez généralement les doublons à l'aide du nom et du numéro du collecteur. Les données du GBIF contiennent souvent des variations d'écriture et des erreurs de transcription (comme des fautes de frappe issues d'étiquettes d'herbiers manuscrites) ; nettoyer ces informations rend les recherches de doublons beaucoup plus fiables.
 
-Pour commencer, vous aurez besoin d'une liste de toutes les combinaisons uniques de collecteurs du jeu de données. Le script identifiera le collecteur principal (le premier nom dans une liste de collecteurs) pour chaque fiche. Nous avons fourni le script `generate_collectors.py` pour compiler cette liste. Exécutez-le avec :
-`python "[chemin du dépôt]/data-prep/generate_collectors.py" .`
-Cela enregistre la liste des collecteurs uniques dans `occurrence_unique_recorded_by.csv`.
+Il est important de noter que le résultat n'a pas besoin d'être parfait. Concentrez votre temps sur les noms associés à un grand nombre de fiches.
 
-Ouvrez le fichier dans Excel, en veillant à préserver les caractères spéciaux (vous pouvez suivre le guide de la [page d'exportation des données](./docs/exporting#opening-exported-data-in-excel)). Triez les lignes dans Excel par `primary_collector_lastname` (nom de famille du collecteur principal) puis par `record_count` (nombre de fiches). Cela permet de regrouper les variantes du nom d'un collecteur et d'afficher les orthographes les plus fréquentes en premier. Parcourez cette liste pour standardiser les noms dans la colonne `primary_collector_lastname`. Veuillez éviter d'inclure des initiales, des accents ou des caractères spéciaux — l'application a besoin d'un nom de famille propre et en majuscules pour effectuer les correspondances. Si le script d'analyse s'est trompé (par exemple en plaçant des initiales dans le champ du nom de famille), corrigez-le simplement manuellement. Vous pouvez vous référer à un index ou répertoire de collecteurs botaniques locaux pour vous guider. Pour les jeux de données très volumineux, le nettoyage des noms peut prendre un certain temps, mais cela améliore grandement la précision de la recherche de doublons. Veillez à ne pas modifier la colonne `recordedBy` d'origine — le script en a besoin intacte pour appliquer vos corrections au jeu de données principal. Une fois terminé, sauvegardez le fichier. 
+Voici un flux de travail suggéré pour standardiser les noms :
+- **Extraire** une liste de chaînes de caractères de collecteurs uniques (`dwc:recordedBy`) du jeu de données à l'aide du script Python `generate_collectors.py`.
+- **Supprimer** les valeurs génériques telles que `s.n.`, `collector unknown`, `anon`, `agric`, `school`, `botany`, `service`, `flora`, `forest`, `remarks`, etc.
+- **Analyser** (parser) les chaînes de collecteurs restantes pour extraire le collecteur principal (en utilisant l'analyseur de Bionomia.net décrit ci-dessous).
+- **Convertir** les caractères spéciaux en caractères normaux (par exemple, en utilisant `normalize()` dans OpenRefine v3.10+).
+- **Éliminer** (trim) les initiales des noms (par exemple en utilisant des expressions OpenRefine comme `value.replace(/[A-Z\.]+\s/,'').trim()` et `value.replace(/[A-Z\.\s]+$/,'').trim()`).
+- **Filtrer** sur les particules de noms (par exemple, *le*, *la*, *de*, *der*, *van*) et les convertir en majuscules lors de la correction.
+- **Limiter** vos vérifications aux noms non vérifiés (si vous êtes dans OpenRefine, vous pouvez utiliser un filtre de facette majuscule comme `value == value.toUppercase()`).
+- **Séparer** (split) sur les espaces pour extraire le nom de famille (note : cela supprimera les noms de famille composés sans trait d'union, que vous pourrez corriger plus tard).
+- **Vérifier** manuellement par la première lettre, en donnant la priorité aux noms ayant un grand nombre de fiches (en gardant le filtre majuscule activé).
+- **Rechercher** manuellement les collecteurs ayant des noms de famille composés et les corriger si nécessaire.
+- **Filtrer** les noms qui ne contiennent que des initiales et les remplacer par les noms complets.
+- **Convertir** en majuscules, puis supprimer la ponctuation et les espaces.
+- **Exporter** la liste finale nettoyée pour l'étape suivante.
 
-![Data prep codes](/wioi-duplicate-finder-docs/data-prep-collectors-excel.png)
-<span style="font-size: 80%;">Ouvrez le fichier de sortie dans Excel, allez dans l'onglet Données, sélectionnez Trier et triez sur primary_collector_lastname et record_count, comme sur cette image.</span>
+Plusieurs de ces étapes sont beaucoup plus faciles à réaliser à l'aide d'un outil comme [OpenRefine](https://openrefine.org/).
+
+#### Utilisation de l'analyseur de noms Bionomia
+
+Analyser des noms à partir de chaînes de texte libre est difficile car il n'existe pas de format standard pour la saisie des noms selon les différents herbiers. Par exemple, le nom d'un collecteur peut être enregistré sous la forme `IB Pole-Evans`, `I.B. Pole Evans`, `Pole-Evans, I.B.`, ou simplement `Pole Evans`. Les chaînes de collecteurs peuvent également présenter des séparateurs incohérents.
+
+Pour faciliter cela, nous pouvons utiliser le même système que celui utilisé par [Bionomia.net](https://bionomia.net/) pour analyser les noms provenant du GBIF. Il utilise `namae`, qui est actuellement l'un des meilleurs analyseurs de noms disponibles (il n'y a pas d'équivalent comparable écrit en Python). Comme il est écrit en Ruby, il nécessite une configuration supplémentaire, mais nous avons fourni [un autre dépôt avec un wrapper d'API simple](https://github.com/ianengelbrecht/ruby-name-parser-api) que vous pouvez exécuter localement dans votre environnement de nettoyage de données. Appelez cette API avec la chaîne de nom brut pour obtenir une version analysée plus propre (que vous pourrez ensuite affiner davantage).
 
 ### Mise à jour du jeu de données principal
 

@@ -78,20 +78,36 @@ Rehefa vita ianao dia tehirizo ilay rakitra.
 
 Ankehitriny, ampiharo amin'ny vondron-tahirin-kevitra lehibe ireo fanovana ireo amin'ny fampiasana ny script `filter_collections.py`. Alefaso amin'ny:
 `python "[chemin du dépôt]/data-prep/filter_collections.py" .`
-Raha nanova anarana rakitra ianao dia afaka mandefa ilay script miaraka amin'ny `-h` ho solon'ny teboka `.` mba hahitana ny fomba amaritana anarana rakitra manokana, na mangataka fanampiana amin'ny mpanampy AI. Ity script ity dia mamorona tahirin-kevitra voasivana antsoina hoe `occurrence_formatted_filtered.csv`. Dingana manaraka: ny fandaminana ny mpanangona. 
+Raha nanova anarana rakitra ianao dia afaka mandefa ilay script miaraka amin'ny `-h` ho solon'ny teboka `.` mba hahitana ny fomba amaritana anarana rakitra manokana, na mangataka fanampiana amin'ny mpanampy AI. Ity script ity dia mamorona tahirin-kevitra voasivana antsoina hoe `occurrence_formatted_filtered.csv`. 
 
 ### Fandaminana ny mpanangona
 
-Tena ilaina ny fandaminana ny anaran'ny mpanangona, satria matetika ianao no mikaroka dika mitovy amin'ny fampiasana ny anarana sy ny laharan'ny mpanangona. Ny tahirin-kevitra GBIF dia matetika misy fiovana sy fahadisoana amin'ny fandikana (toy ny fahadisoana manoratra avy amin'ny mariky ny herbarium); ny fanadiovana izany dia mahatonga ny fikarohana ho azo antoka kokoa. 
+Tena ilaina ny fandaminana ny anaran'ny mpanangona, satria matetika ianao no mikaroka dika mitovy amin'ny fampiasana ny anarana sy ny laharan'ny mpanangona. Ny tahirin-kevitra GBIF dia matetika misy fiovana amin'ny fanoratana sy fahadisoana amin'ny fandikana (toy ny fahadisoana manoratra avy amin'ny etiketin'ny herbarium soratana amin'ny tanana); ny fanadiovana izany dia mahatonga ny fikarohana dika mitovy ho azo antoka kokoa.
 
-Mba hanombohana dia mila lisitry ny fitambaran'ny mpanangona tsy manam-paharoa rehetra avy amin'ny tahirin-kevitra ianao. Ny script dia hamantatra ny mpanangona voalohany (ny anarana voalohany ao amin'ny lisitry ny mpanangona) ho an'ny tahiry tsirairay. Nanome ny script `generate_collectors.py` izahay mba hanangonana ity lisitra ity. Alefaso amin'ny:
-`python "[chemin du dépôt]/data-prep/generate_collectors.py" .`
-Izany dia mitahiry ny lisitry ny mpanangona tsy manam-paharoa ao amin'ny `occurrence_unique_recorded_by.csv`.
+Ny zava-dehibe dia tsy voatery ho tonga lafatra tanteraka ny vokatra. Mifantoha amin'ireo anarana manana firaketana maro mifandraika aminy.
 
-Sokafy ao amin'ny Excel ilay rakitra, ary ataovy azo antoka fa voatahiry ireo litera manokana (afaka manaraka ny torolàlana ao amin'ny [pejy fanondranana tahirin-kevitra](./docs/exporting#opening-exported-data-in-excel) ianao). Alaharo ny tsipika ao amin'ny Excel araka ny `primary_collector_lastname` (anaran'ny mpanangona voalohany) ary avy eo araka ny `record_count` (isan'ny tahiry). Izany dia mamondrona ny fiovan'ny anaran'ny mpanangona iray ary mampiseho ny fanoratana matetika indrindra aloha. Parizo ity lisitra ity mba handaminana ny anarana ao amin'ny tsanganana `primary_collector_lastname`. Azafady, fadio ny mampiditra fanafohezana anarana (initials), tsindrim-peo (accents) na litera manokana — mila anarana madio sy amin'ny litera lehibe ny fampiharana mba hanaovana ny fampifandraisana. Raha nanao fahadisoana ilay script (ohatra, nampiditra fanafohezana anarana ao amin'ny sahan'ny anaran'ny fianakaviana), ahitsio fotsiny amin'ny tanana izany. Azonao atao ny mijery ny tondro na ny lahatahirin'ny mpanangona zavamaniry ao an-toerana ho mpitari-dalana. Ho an'ny vondron-tahirin-kevitra lehibe dia mety handany fotoana ny fanadiovana anarana, saingy manatsara ny fahamarinan'ny fitadiavana dika mitovy azony. Tandremo tsara mba tsy hanova ny tsanganana `recordedBy` voalohany — ilain'ilay script tsy misy fanovana izany mba hampiharana ny fanitsianao amin'ny vondron-tahirin-kevitra lehibe. Rehefa vita ianao dia tehirizo ilay rakitra. 
+Ity misy fizotran'asa naroso handaminana ny anarana:
+- **Mamoaka** lisitry ny andian-tsoratra mpanangona tsy manam-paharoa (`dwc:recordedBy`) avy amin'ny vondron-tahirin-kevitra amin'ny fampiasana ny script Python `generate_collectors.py`.
+- **Manala** ireo sanda mahazatra toy ny `s.n.`, `collector unknown`, `anon`, `agric`, `school`, `botany`, `service`, `flora`, `forest`, `remarks`, sns.
+- **Mamakafaka** (parse) ireo andian-tsoratra mpanangona sisa mba hamoahana ny mpanangona voalohany (amin'ny fampiasana ny mpanampy avy amin'ny Bionomia.net voalaza etsy ambany).
+- **Manova** ny litera manokana ho litera tsotra (ohatra, mampiasa `normalize()` ao amin'ny OpenRefine v3.10+).
+- **Manapaka** (trim) ny fanafohezana anarana (initials) amin'ny anarana (ohatra, mampiasa fomba fiteny ao amin'ny OpenRefine toy ny `value.replace(/[A-Z\.]+\s/,'').trim()` sy `value.replace(/[A-Z\.\s]+$/,'').trim()`).
+- **Manasivana** (filter) ireo mpampitohy anarana (ohatra: *le*, *la*, *de*, *der*, *van*) ary manova azy ireo ho litera lehibe rehefa manitsy azy.
+- **Mametra** ny fanamarinanao amin'ireo anarana mbola tsy voazaha ihany (raha ao amin'ny OpenRefine, azonao ampiasaina ny sivana litera lehibe toy ny `value == value.toUppercase()`).
+- **Mizara** (split) amin'ny alalan'ny elanelana (space) mba hamoahana ny anaran'ny fianakaviana (fanamarihana: mety tsy ho voaray amin'ny izany ny anaran'ny fianakaviana misy fampitohiana roa tsy misy tsipika, izay hamboarina any aoriana).
+- **Manamarina** amin'ny tanana araka ny litera voalohany, amin'ny alalan'ny fanomezana vahana ireo anarana manana isan-tsoratry ny fisehoana ambony (mitazona the sivana litera lehibe ho mandeha).
+- **Mikaroka** amin'ny tanana ireo mpanangona manana anaram-pianakaviana misy fampitohiana roa ary manitsy izany raha ilaina.
+- **Manasivana** ireo anarana izay fanafohezana (initials) fotsiny ary manova azy ho anarana feno.
+- **Manova** ho litera lehibe (uppercase), ary manala ny mari-panoratana sy ny elanelana (spaces).
+- **Manondrana** (export) ny lisitra farany nodiovina ho an'ny dingana manaraka.
 
-![Data prep codes](/wioi-duplicate-finder-docs/data-prep-collectors-excel.png)
-<span style="font-size: 80%;">Sokafy ny vokatra ao amin'ny Excel, mandehana any amin'ny tontonana Data, fidio ny Sort ary alaharo araka ny primary_collector_lastname sy record_count, tahaka ny amin'ity sary ity.</span>
+Mora kokoa ny manao ny ankamaroan'ireo dingana ireo raha mampiasa fitaovana toy ny [OpenRefine](https://openrefine.org/).
+
+#### Fampiasana ny Bionomia Name Parser
+
+Sarotra ny mamakafaka anarana avy amin'ny andian-tsoratra malalaka satria tsy misy fenitra iraisana amin'ny fomba fandraisana anarana any amin'ny herbarioma samihafa. Ohatra, ny anaran'ny mpanangona iray dia mety ho voasoratra toy izao: `IB Pole-Evans`, `I.B. Pole Evans`, `Pole-Evans, I.B.`, na `Pole Evans` fotsiny. Mety tsy hitovy ihany koa ny famantaran'ny fisarahana eo amin'ny andian-tsoratra anaran'ny mpanangona.
+
+Mba hanamorana izany dia azontsika ampiasaina ny rafitra mitovy amin'izay ampiasain'ny [Bionomia.net](https://bionomia.net/) handinihana ny anarana avy amin'ny GBIF. Mampiasa `namae` izy io, izay iray amin'ireo mpamakafaka anarana tsara indrindra misy amin'izao tempo izao (tsy misy mitovy aminy voasoratra amin'ny Python). Satria amin'ny teny Ruby no nanoratana azy, dia mila fandrindrana fanampiny izy io, saingy efa nanome [tahiry iray hafa misy wrapper API tsotra](https://github.com/ianengelbrecht/ruby-name-parser-api) izahay izay azonao alefa eo an-toerana amin'ny tontolo fanadiovana ny datanao. Antsoy io API io miaraka amin'ny andian-tsoratra anarana fototra mba hahazoana dika voadio kokoa (izay azonao hatsaraina avy eo).
 
 ### Fanavaozana ny vondron-tahirin-kevitra lehibe
 

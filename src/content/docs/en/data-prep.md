@@ -82,16 +82,32 @@ If you renamed any files, you can run the script with `-h` instead of the dot `.
 
 ### Standardizing collectors
 
-Standardizing collector names is crucial, since you'll typically search for duplicates using the collector's name and number. GBIF data often contains variations and transcription errors (like typos from herbarium labels), so cleaning this up makes searches much more reliable. 
+Standardizing collector names is crucial since you will typically search for duplicates using the collector's name and number. GBIF data often contains spelling variations and transcription errors (like typos from handwritten herbarium labels), so cleaning this up makes duplicate searches much more reliable.
 
-To start, you'll need a list of all unique collector combinations from the dataset. The script will identify the primary collector (the first name in a list of collectors) for each record. We've provided `generate_collectors.py` to compile this list. Run it with:
-`python "[repo path]/data-prep/generate_collectors.py" .`
-This saves the unique collector list to `occurrence_unique_recorded_by.csv`.
+Importantly, the result does not need to be completely perfect. Focus your time on names that have a high number of associated records.
 
-Open the file in Excel, making sure to preserve special characters (you can follow the guide on the [Exporting data page](./docs/exporting#opening-exported-data-in-excel)). Sort the rows in Excel by `primary_collector_lastname` and then by `record_count`. This groups variations of a collector's name together and shows you the most frequent spellings first. Work through this list to standardize the names in the `primary_collector_lastname` column. Please avoid including initials, accents, or special characters—the application needs a clean, uppercase last name for matching. If the parser made a mistake (like putting initials in the last name field), simply correct it manually. You might want to refer to a local botanical collector index or directory for guidance. For very large datasets, cleaning names can take some time, but it makes a huge difference in duplicate lookup accuracy. Be sure not to edit the original `recordedBy` column—the script needs it untouched to map your corrections back to the main dataset. Once you're done, save the file. 
+Here is a suggested workflow for standardizing names:
+- **Extract** a list of unique collector strings (`dwc:recordedBy`) from the dataset using the Python script `generate_collectors.py`.
+- **Remove** generic values such as `s.n.`, `collector unknown`, `anon`, `agric`, `school`, `botany`, `service`, `flora`, `forest`, `remarks`, etc.
+- **Parse** the remaining collector strings to extract the primary collector (using the parser from Bionomia.net described below).
+- **Convert** special characters to regular characters (for example, using `normalize()` in OpenRefine v3.10+).
+- **Trim** initials from the names (e.g. using OpenRefine expressions like `value.replace(/[A-Z\.]+\s/,'').trim()` and `value.replace(/[A-Z\.\s]+$/,'').trim()`).
+- **Filter** on name particles (e.g., *le*, *la*, *de*, *der*, *van*) and convert to uppercase when correcting them.
+- **Limit** your checks to unchecked names (if in OpenRefine, you can use an uppercase facet filter like `value == value.toUppercase()`).
+- **Split** on spaces to extract the last name (note: this may drop double-barrelled last names without hyphens, which you can fix later).
+- **Check** names manually by their first letter, prioritizing names with high record counts (keeping the uppercase filter on).
+- **Search** manually for collectors with double-barrelled last names and correct them where necessary.
+- **Filter** for names that consist only of initials and update them to full names.
+- **Convert** to uppercase, then remove punctuation and spaces.
+- **Export** the final cleaned list for the next step.
 
-![Data prep codes](/wioi-duplicate-finder-docs/data-prep-collectors-excel.png)
-<span style="font-size: 80%;">Open the output in Excel, go to the Data tab, select Sort and sort on primary_collector_lastname and record_count, as in this image.</span>
+Several of these steps are much easier to carry out using a tool like [OpenRefine](https://openrefine.org/).
+
+#### Using the Bionomia Name Parser
+
+Parsing names from free-text strings is difficult because there is no standard format for how names are captured across different herbaria. For example, a collector's name might be recorded as `IB Pole-Evans`, `I.B. Pole Evans`, `Pole-Evans, I.B.`, or simply `Pole Evans`. Collector strings can also have inconsistent separators.
+
+To make this easier, we can use the system that [Bionomia.net](https://bionomia.net/) uses to parse names from GBIF. It uses `namae`, which is currently one of the best name parsers available (there are no comparable equivalents written in Python). Because it is written in Ruby, it requires some extra setup, but we have provided [another repository with a simple API wrapper](https://github.com/ianengelbrecht/ruby-name-parser-api) that you can run locally in your data cleaning environment. Call this API with the raw name string to receive a cleaner parsed version (which you can then refine further).
 
 ### Updating the main dataset
 
