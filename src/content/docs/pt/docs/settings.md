@@ -25,7 +25,7 @@ Assim que tiver um conjunto de dados pronto para importação, você poderá cli
 
 ### Registros taxonômicos do WCVP
 
-O Localizador de Duplicatas utiliza o World Checklist of Vascular Plants (WCVP) como sua base taxonômica. O WCVP é atualizado duas vezes por ano e a versão mais recente está disponível para [download neste link](https://sftp.kew.org/pub/data-repositories/WCVP/). Se você deseja atualizar o conjunto de dados do WCVP no seu aplicativo, baixe o arquivo mais recente desse link (`wcvp.zip`), descompacte o conteúdo e, em seguida, no Localizador de Duplicatas, clique no botão Importar/Atualizar WCVP (Import/Update WCVP) e selecione o arquivo `wcvp_names.csv`. O aplicativo atualizará os dados do WCVP e então você poderá continuar trabalhando.
+O Localizador de Duplicatas utiliza o World Checklist of Vascular Plants (WCVP) como sua base taxonômica. O WCVP é atualizado duas vezes por ano e a versão mais recente está disponível para <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">download neste link</a>. Se você deseja atualizar o conjunto de dados do WCVP no seu aplicativo, baixe o arquivo mais recente desse link (`wcvp.zip`), descompacte o conteúdo e, em seguida, no Localizador de Duplicatas, clique no botão Importar/Atualizar WCVP (Import/Update WCVP) e selecione o arquivo `wcvp_names.csv`. Certifique-se de atualizar corretamente o número da versão do WCVP, que está disponível no ficheiro de metadados incluído no seu download.
 
 ## Configurações
 

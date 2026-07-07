@@ -25,7 +25,8 @@ Une fois que vous avez un jeu de données prêt à être importé, vous pouvez c
 
 ### Enregistrements taxonomiques du WCVP
 
-Le Duplicate Finder utilise le World Checklist of Vascular Plants (WCVP) comme base taxonomique. Le WCVP est mis à jour deux fois par an et la dernière version est disponible en [téléchargement à ce lien](https://sftp.kew.org/pub/data-repositories/WCVP/). Si vous souhaitez mettre à jour le jeu de données WCVP dans votre application, téléchargez le dernier fichier à partir de ce lien (`wcvp.zip`), décompressez le contenu, puis, dans le Duplicate Finder, cliquez sur le bouton Importer/Mettre à jour le WCVP (Import/Update WCVP) et sélectionnez le fichier `wcvp_names.csv`. L'application mettra à jour les données WCVP et vous pourrez ensuite continuer à travailler.
+Le Duplicate Finder utilise le World Checklist of Vascular Plants (WCVP) comme base taxonomique. Le WCVP est mis à jour deux fois par an et la dernière version est disponible en <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">téléchargement à ce lien</a>. Si vous souhaitez mettre à jour le jeu de données WCVP dans votre application, téléchargez le dernier fichier à partir de ce lien (`wcvp.zip`), décompressez le contenu, puis, dans le Duplicate Finder, cliquez sur le bouton Importer/Mettre à jour le WCVP (Import/Update WCVP) et sélectionnez le fichier `wcvp_names.csv`. Veillez à mettre à jour correctement le numéro de version du WCVP, qui figure dans le fichier de métadonnées inclus avec votre téléchargement.
+
 
 ## Paramètres de configuration
 

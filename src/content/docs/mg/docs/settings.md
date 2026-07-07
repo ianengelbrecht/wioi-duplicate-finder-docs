@@ -25,7 +25,7 @@ Raha vantany vao manana tahirin-kevitra vonona hafarana ianao, dia azonao atao n
 
 ### Firaketana ara-tsokajy WCVP
 
-Ny Fikarohana Dika Mitovy dia mampiasa ny World Checklist of Vascular Plants ho toy ny tahiry ara-tsokajy fototra (taxon backbone). Havaozina indroa isan-taona ny WCVP ary ny dikan-teny farany indrindra dia azo [alaina amin'ity rohy ity](https://sftp.kew.org/pub/data-repositories/WCVP/). Raha te hanavao ny tahirin-kevitra WCVP ao amin'ny fampiharanao ianao, alao ny fisie farany amin'io rohy io (`wcvp.zip`), vahao ny ao anatiny (unzip), ary avy eo ao amin'ny Fikarohana Dika Mitovy, tsindrio ny bokotra Hampiditra/Hanavao ny WCVP (Import/Update WCVP), ary fidio ny fisie `wcvp_names.csv`. Ny fampiharana dia hanavao ny angon-drakitra WCVP ary afaka manohy miasa ianao avy eo.
+Ny Fikarohana Dika Mitovy dia mampiasa ny World Checklist of Vascular Plants ho toy ny tahiry ara-tsokajy fototra (taxon backbone). Havaozina indroa isan-taona ny WCVP ary ny dikan-teny farany indrindra dia azo <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">alaina amin'ity rohy ity</a>. Raha te hanavao ny tahirin-kevitra WCVP ao amin'ny fampiharanao ianao, alao ny fisie farany amin'io rohy io (`wcvp.zip`), vahao ny ao anatiny (unzip), ary avy eo ao amin'ny Fikarohana Dika Mitovy, tsindrio ny bokotra Hampiditra/Hanavao ny WCVP (Import/Update WCVP), ary fidio ny fisie `wcvp_names.csv`. Ataovy azo antoka fa havaozina tsara ny laharan’ny kinovan’ny WCVP, izay hita ao amin’ilay rakitra metadata miaraka amin’ny fisintomanao.
 
 ## Ny Fametrahana
 

@@ -25,7 +25,8 @@ Once you have a dataset ready for import, you can click on the Load New Dataset 
 
 ### WCVP taxonomic records
 
-The Duplicate Finder makes use of the World Catalog of Vascular Plants as its taxon backbone. The WCVP is updated twice a year and the latest version is available for [download at this link](https://sftp.kew.org/pub/data-repositories/WCVP/). If you want to update the WCVP dataset in your app, download the latest file from that link (`wcvp.zip`), unzip the contents, and then in the Duplicate Finder click the Import/Update WCVP button, and select the `wcvp_names.csv` file. The app will update the WCVP data and then you can continue working. 
+The Duplicate Finder makes use of the World Catalog of Vascular Plants as its taxon backbone. The WCVP is updated twice a year and the latest version is available for 
+<a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">download at this link</a>. If you want to update the WCVP dataset in your app, download the latest file from that link (`wcvp.zip`), unzip the contents, and then in the Duplicate Finder click the Import/Update WCVP button, and select the `wcvp_names.csv` file. The app will update the WCVP data and then you can continue working. 
 
 ## Configuration Settings
 
