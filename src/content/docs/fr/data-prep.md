@@ -55,13 +55,13 @@ Le script affichera sa progression à l'écran pendant son exécution. Il crée 
 
 L'utilisation de codes d'herbiers standardisés et officiellement acceptés dans l'application Duplicate Finder is importante : cela permet de voir facilement d'où proviennent les fiches et garantit que le champ des doublons est mis à jour correctement. Malheureusement, de nombreuses fiches du GBIF ne disposent pas de codes de collection propres (certaines incluent même des numéros de code-barres dans le champ du code de collection !), vous devrez donc les nettoyer dans votre jeu de données. Vous constaterez peut-être aussi que votre téléchargement contient des fiches que vous ne souhaitez pas conserver. Le nettoyage et la standardisation des codes de collection vous aident à les filtrer. Il s'agit d'un processus simple en trois étapes : extraire les combinaisons uniques de codes d'institution/collection, corriger ou supprimer celles que vous ne voulez pas, et appliquer ces changements dans le jeu de données principal. 
 
-#### Extraction des combinaisons uniques de codes d'institution/collection
+##### Extraction des combinaisons uniques de codes d'institution/collection
 
 Tout d'abord, extrayez toutes les combinaisons uniques de codes d'institution/collection afin de voir ce qui doit être mis à jour. Nous avons fourni un script appelé `unique_inst_coll_codes.py` à cet effet. Exécutez-le comme précédemment :
 `python "[chemin du dépôt]/data-prep/unique_inst_coll_codes.py" .`
 Il affichera sa progression et enregistrera les résultats dans `occurrence_formatted_inst_coll_codes.csv` une fois terminé. Si vous voyez des milliers de combinaisons uniques, il est probable que des numéros de code-barres aient été accidentellement stockés dans le champ du code de collection. Ne vous inquiétez pas — vous corrigerez cela à l'étape suivante. 
 
-#### Correction des codes incorrects et inutiles
+##### Correction des codes incorrects et inutiles
 
 Ouvrez le fichier `occurrence_formatted_inst_coll_codes.csv` fraîchement créé dans Excel (ou dans un éditeur de texte comme Notepad si vous préférez). La liste est triée par le nombre de spécimens pour chaque combinaison. Vous remarquerez probablement tout de suite que certains codes d'herbiers sont stockés dans le champ `institutionCode`, ou que certains champs sont vides. 
 

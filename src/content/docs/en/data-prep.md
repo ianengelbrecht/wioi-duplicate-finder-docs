@@ -55,13 +55,13 @@ The script will output its progress to the screen as it runs. It also creates a 
 
 Using standardized and officially accepted herbarium codes in the Duplicate Finder is important: it makes it easy to see where records come from and ensures the duplicates field is updated correctly. Unfortunately, many GBIF records don't have clean collection codes (some even have barcode numbers in the collection code field!), so you'll need to clean them up in your dataset. You might also notice some records in the download that you don't want to keep. Cleaning and standardizing the collection codes helps you filter these out. This is a simple three-step process: extracting the unique institution/collection code combinations, correcting or removing the ones you don't want, and applying those changes back to the main dataset. 
 
-#### Extracting unique institution/collection code combinations
+##### Extracting unique institution/collection code combinations
 
 First, extract all the unique institution/collection code combinations so you can see what needs updating. We've provided a script called `unique_inst_coll_codes.py` to do this. Run it just like before:
 `python "[repo path]/data-prep/unique_inst_coll_codes.py" .`
 It will show its progress and save the results to `occurrence_formatted_inst_coll_codes.csv` once it's done. If you see thousands of unique combinations, it's likely that barcode numbers were accidentally stored in the collection code field. Don't worry—you'll fix that in the next step. 
 
-#### Fixing incorrect and unnecessary codes
+##### Fixing incorrect and unnecessary codes
 
 Open the newly created `occurrence_formatted_inst_coll_codes.csv` file in Excel (or a text editor like Notepad if you prefer). The list is ordered by the number of specimens for each combination. You'll likely notice right away that some herbarium codes are stored in the `institutionCode` field, or that some fields are blank. 
 
