@@ -74,6 +74,11 @@ Several of the form fields use the local reference database to suggest values wh
 - Don't worry about updating outdated names or synonyms, capture the most recent identification on the specimen.
 - Sometimes the name on the specimen won't match a name in WCVP, e.g. 'ined' names. You can just type the name in as it is on the specimen (you will see a gentle warning that this is not a WCVP name).
 
+### Smart Locality Lookups
+- The **Locality** field autocompletes using a query of previously captured records and reference records from GBIF.
+- Suggestions in the dropdown show the locality text and any associated notes, alongside their country, state/province, county, and coordinates.
+- Selecting a suggestion will automatically populate the form's **Country**, **Admin 2** (state/province), **Admin 3** (county), **Verbatim Coordinates**, and **Locality Notes** fields using the details from that record.
+
 ### Adding New Values Throughout
 - **Adding New Collectors (Agents)**: 
   When you type a primary collector name in the autocomplete field and tab away, the app checks the database registry. If the collector does not exist, a dialog prompts you: *"Would you like to add this collector to the registry?"* Confirming adds them, making their name available for future autocompletes.

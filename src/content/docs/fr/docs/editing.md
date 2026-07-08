@@ -74,6 +74,10 @@ Plusieurs champs du formulaire utilisent la base de données de référence loca
 - Ne vous inquiétez pas de mettre à jour les noms obsolètes ou les synonymes ; saisissez l’identification la plus récente indiquée sur le spécimen.
 - Il arrive que le nom figurant sur le spécimen ne corresponde à aucun nom dans WCVP, par exemple les noms « ined. ». Vous pouvez simplement saisir le nom tel qu’il apparaît sur le spécimen ; un avertissement discret indiquera qu’il ne s’agit pas d’un nom WCVP.
 
+### Recherche intelligente de localités
+- Le champ **Localité** s'auto-complète en interrogeant les enregistrements précédemment saisis ainsi que les données de référence de GBIF.
+- Les suggestions de la liste déroulante affichent le texte de la localité et toutes les notes associées, ainsi que leur pays, état/province, comté et coordonnées.
+- La sélection d'une suggestion remplira automatiquement les champs **Pays**, **Admin 2** (état/province), **Admin 3** (comté), **Coordonnées textuelles** et **Notes sur la localité** du formulaire avec les détails de cet enregistrement.
 
 ### Ajout de nouvelles valeurs partout
 - **Ajout de nouveaux collecteurs (agents)** :

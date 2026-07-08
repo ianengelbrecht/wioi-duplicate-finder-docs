@@ -74,6 +74,10 @@ Maro amin'ireo faritra ao amin'ny takelaka no mampiasa ny tahirin-kevitra fototr
 - Aza manahy ny amin’ny fanavaozana anarana efa lany andro na anarana mitovy hevitra; soraty ny famantarana farany indrindra hita eo amin’ilay santionany.
 - Indraindray, mety tsy hifanaraka amin’ny anarana ao amin’ny WCVP ny anarana eo amin’ilay santionany, ohatra ny anarana “ined.”. Azonao soratana fotsiny ilay anarana araka izay hita eo amin’ilay santionany; hisy fampitandremana malefaka hiseho fa tsy anarana ao amin’ny WCVP izany.
 
+### Fikarohana Toerana Manan-tsaina
+- Ny faritra **Toerana** dia mameno ho azy amin'ny alalan'ny fikarohana ireo firaketana efa voatahiry teo aloha sy ny angon-drakitra fototra avy amin'ny GBIF.
+- Ny soso-kevitra ao amin'ny lisitra mipoitra dia mampiseho ny lahatsoratry ny toerana sy izay fanamarihana mifandray aminy, miaraka amin'ny firenena, zana-paritra (Admin 2), distrika (Admin 3), ary mari-toerana.
+- Ny fisafidianana soso-kevitra iray dia hameno ho azy ireo faritra **Firenena**, **Admin 2** (faritany/faritra), **Admin 3** (kaominina/distrika), **Mari-toerana voasoratra**, ary **Teti-toerana fanampiny** eo amin'ny takelaka amin'ny alalan'ny antsipiriany avy amin'izany firaketana izany.
 
 ### Fampidirana Sanda Vaovao
 - **Fampidirana Mpanangona Vaovao (Agents)**: 

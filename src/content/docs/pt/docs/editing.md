@@ -74,6 +74,11 @@ Vários campos do formulário usam o banco de dados de referência local para su
 - Não se preocupe em atualizar nomes desatualizados ou sinónimos; registe a identificação mais recente indicada no espécime.
 - Por vezes, o nome no espécime não corresponde a um nome no WCVP, por exemplo nomes “ined.”. Pode simplesmente introduzir o nome tal como aparece no espécime; verá um aviso discreto de que não é um nome do WCVP.
 
+### Consultas Inteligentes de Localidade
+- O campo **Localidade** é preenchido automaticamente por meio de uma consulta a registros capturados anteriormente e a registros de referência do GBIF.
+- As sugestões no menu suspenso mostram o texto da localidade e quaisquer notas associadas, juntamente com o seu país, estado/província, condado e coordenadas.
+- A seleção de uma sugestão preencherá automaticamente os campos **País**, **Admin 2** (estado/província), **Admin 3** (condado), **Coordenadas Textuais** e **Notas da Localidade** do formulário usando os detalhes desse registro.
+
 ### Adicionando Novos Valores em Todo o Formulário
 - **Adicionando Novos Coletores (Agentes)**:
   Quando você digita o nome de um coletor principal no campo de preenchimento automático e sai dele, o aplicativo verifica o registro do banco de dados. Se o coletor não existir, uma caixa de diálogo perguntará: *"Tem certeza de que deseja salvar o novo nome?"*. Confirmar salva o nome, disponibilizando-o para futuros preenchimentos automáticos.
