@@ -5,56 +5,75 @@ next:
   link: /en/docs/signin/
   label: Sign up / Sign in
 ---
+
 import release from '../../../config/release.json';
 import data from '../../../config/data.json';
 
-To get started with the Duplicate Finder, you'll need to download three things: the application installer, a copy of the World Checklist of Vascular Plants (WCVP) taxonomy, and a reference specimen dataset for your region. You can find the links for each of these below. 
+To get started with the Duplicate Finder, you'll need to download three things: the application
+installer, a copy of the World Checklist of Vascular Plants (WCVP) taxonomy, and a reference
+specimen dataset for your region. You can find the links for each of these below.
 
 #### Step 1: Download the application installer
 
 Click on the link below to download the installer:
 
 <p>
-  <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}>
+  <a
+    href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}
+  >
     Application installer
   </a>
 </p>
 
-We've included step-by-step instructions below on how to run this installer once your download completes.
+We've included step-by-step instructions below on how to run this installer once your download
+completes.
 
 #### Step 2: Download the latest WCVP data
 
-The latest WCVP data is <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">available here</a>. 
+The latest WCVP data is
+<a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">available here</a>.
 
-Click on the `wcvp.zip` link to download it, and then unzip the archive on your computer. WCVP is the official taxonomic backbone 
-behind the <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a> portal. It is updated roughly
-every six months and you can check back there periodically to get the latest version.  
+Click on the `wcvp.zip` link to download it, and then unzip the archive on your computer. WCVP is
+the official taxonomic backbone behind the
+<a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>
+portal. It is updated roughly every six months and you can check back there periodically to get the
+latest version.
 
 #### Step 3: Select and download a reference dataset (CSV file) for your region
 
-Select and download your region's reference dataset from the list below. (You're welcome to download multiple regions if your collection covers them). These datasets are zipped, so you'll need to unzip them after downloading.
- 
+Select and download your region's reference dataset from the list below. (You're welcome to download
+multiple regions if your collection covers them). These datasets are zipped, so you'll need to unzip
+them after downloading.
+
 <ul>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}
+    >
       West Indian Ocean Islands
     </a>
     (~540k records)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}
+    >
       Flora of Southern Africa region (ZAR, LES, SWA, NAM, BOT)
     </a>
     (~2.1M records)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}
+    >
       Flora Zambeziaca region (ZIM, BOT, MOZ, MAL, ZAM)
     </a>
     (~530k records)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}
+    >
       Flora Angolensis (ANG)
     </a>
     (~130k records)
@@ -65,24 +84,37 @@ Select and download your region's reference dataset from the list below. (You're
 
 ### Installing the Application
 
-Once you've downloaded the files, double-click the application installer (`.exe`) to start installing.
+Once you've downloaded the files, double-click the application installer (`.exe`) to start
+installing.
 
-Because the app is not signed with a commercial certificate, Windows SmartScreen will show a blue warning screen saying **Windows protected your PC**. Don't worry! Click **More info**, and then click **Run anyway** to proceed.
+Because the app is not signed with a commercial certificate, Windows SmartScreen will show a blue
+warning screen saying **Windows protected your PC**. Don't worry! Click **More info**, and then
+click **Run anyway** to proceed.
 
 ![Installation Blue Screen](/wioi-duplicate-finder-docs/blue-screen.png)
+
 <span style="font-size: 80%;">Click on More Info, and then on Run Anyway.</span>
 
 The installer will run, and you can simply accept the default options to complete the installation.
 
 ![Installer](/wioi-duplicate-finder-docs/installer.png)
-<span style="font-size: 80%;">Click Next all the way through with the installer to select default options.</span>
+
+<span style="font-size: 80%;">
+  Click Next all the way through with the installer to select default options.
+</span>
 
 ### Loading data
 
-The first time you run the app, it will automatically take you to the settings screen. You'll need to import the WCVP file (`wcvp_names.csv`) and the reference dataset you downloaded for your region above before you can search for duplicates or capture records. If you need guidance on loading datasets, check out the [settings page](./docs/settings).
+The first time you run the app, it will automatically take you to the settings screen. You'll need
+to import the WCVP file (`wcvp_names.csv`) and the reference dataset you downloaded for your region
+above before you can search for duplicates or capture records. If you need guidance on loading
+datasets, check out the [settings page](/en/docs/settings).
 
 ### App updates
 
-Once installed, the app will automatically check for updates every time you open it (as long as you have an active internet connection). If a new update is available, a notification button will appear in the top header next to the language selector.
+Once installed, the app will automatically check for updates every time you open it (as long as you
+have an active internet connection). If a new update is available, a notification button will appear
+in the top header next to the language selector.
 
-Clicking this button will download and install the update in the background, and the app will restart automatically once it's finished.
+Clicking this button will download and install the update in the background, and the app will
+restart automatically once it's finished.

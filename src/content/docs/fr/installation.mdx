@@ -5,57 +5,76 @@ next:
   link: /fr/docs/signin/
   label: S'inscrire / Se connecter
 ---
+
 import release from '../../../config/release.json';
 import data from '../../../config/data.json';
 
-Pour commencer à utiliser la recherche de doublons (Duplicate Finder), vous devez télécharger trois éléments : l'installateur de l'application, une copie de la taxonomie du World Checklist of Vascular Plants (WCVP) et un jeu de données de référence des spécimens pour votre région. Vous trouverez les liens de téléchargement de chacun de ces éléments ci-dessous. 
+Pour commencer à utiliser la recherche de doublons (Duplicate Finder), vous devez télécharger trois
+éléments : l'installateur de l'application, une copie de la taxonomie du World Checklist of Vascular
+Plants (WCVP) et un jeu de données de référence des spécimens pour votre région. Vous trouverez les
+liens de téléchargement de chacun de ces éléments ci-dessous.
 
 #### Étape 1 : Télécharger l'installateur de l'application
 
 Cliquez sur le lien ci-dessous pour télécharger le programme d’installation:
 
 <p>
-  <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}>
+  <a
+    href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}
+  >
     Installateur de l'application
   </a>
 </p>
 
-Nous avons inclus des instructions étape par étape ci-dessous sur la façon d'exécuter cet installateur une fois votre téléchargement terminé.
+Nous avons inclus des instructions étape par étape ci-dessous sur la façon d'exécuter cet
+installateur une fois votre téléchargement terminé.
 
 #### Étape 2 : Télécharger les dernières données du WCVP
 
-Les dernières données du WCVP sont <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">disponibles ici</a>. 
+Les dernières données du WCVP sont
+<a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">disponibles ici</a>.
 
-Cliquez sur le lien `wcvp.zip` pour le télécharger, puis décompressez l'archive sur votre ordinateur. Le WCVP est la base 
-taxonomique officielle derrière le site internet <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>.  Il est mis à 
-jour environ tous les six mois ; vous pouvez donc revenir régulièrement pour obtenir la dernière version.
-
+Cliquez sur le lien `wcvp.zip` pour le télécharger, puis décompressez l'archive sur votre
+ordinateur. Le WCVP est la base taxonomique officielle derrière le site internet
+<a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>. Il
+est mis à jour environ tous les six mois ; vous pouvez donc revenir régulièrement pour obtenir la
+dernière version.
 
 #### Étape 3 : Sélectionner et télécharger un jeu de données de référence (fichier CSV) pour votre région
 
-Sélectionnez et téléchargez le jeu de données de référence pour votre région dans la liste ci-dessous. (Vous pouvez télécharger plusieurs régions si votre collection le nécessite). Ces jeux de données sont zippés, vous devrez donc également les décompresser après le téléchargement. 
+Sélectionnez et téléchargez le jeu de données de référence pour votre région dans la liste
+ci-dessous. (Vous pouvez télécharger plusieurs régions si votre collection le nécessite). Ces jeux
+de données sont zippés, vous devrez donc également les décompresser après le téléchargement.
 
 <ul>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}
+    >
       Îles de l'océan Indien occidental
     </a>
     (~540k enregistrements)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}
+    >
       Région de la Flore d'Afrique australe (ZAR, LES, SWA, NAM, BOT)
     </a>
     (~2.1M enregistrements)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}
+    >
       Région de la Flore Zambesiaca (ZIM, BOT, MOZ, MAL, ZAM)
     </a>
     (~530k enregistrements)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}
+    >
       Flore Angolensis (ANG)
     </a>
     (~130k enregistrements)
@@ -66,24 +85,43 @@ Sélectionnez et téléchargez le jeu de données de référence pour votre rég
 
 ### Installer l'application
 
-Une fois les fichiers téléchargés, double-cliquez sur l'installateur de l'application (`.exe`) pour lancer l'installation.
+Une fois les fichiers téléchargés, double-cliquez sur l'installateur de l'application (`.exe`) pour
+lancer l'installation.
 
-Comme l'application n'est pas signée avec un certificat commercial, Windows SmartScreen affichera un écran d'avertissement bleu indiquant **Windows a protégé votre ordinateur**. Ne vous inquiétez pas ! Cliquez sur **Informations complémentaires** (More info), puis sur **Exécuter quand même** (Run anyway) pour continuer.
+Comme l'application n'est pas signée avec un certificat commercial, Windows SmartScreen affichera un
+écran d'avertissement bleu indiquant **Windows a protégé votre ordinateur**. Ne vous inquiétez pas !
+Cliquez sur **Informations complémentaires** (More info), puis sur **Exécuter quand même** (Run
+anyway) pour continuer.
 
 ![Écran bleu d'installation](/wioi-duplicate-finder-docs/blue-screen.png)
-<span style="font-size: 80%;">Cliquez sur Informations complémentaires (More info), puis sur Exécuter quand même (Run anyway).</span>
 
-L'installateur s'exécutera et vous pourrez simplement accepter les options par défaut pour terminer l'installation.
+<span style="font-size: 80%;">
+  Cliquez sur Informations complémentaires (More info), puis sur Exécuter quand même (Run anyway).
+</span>
+
+L'installateur s'exécutera et vous pourrez simplement accepter les options par défaut pour terminer
+l'installation.
 
 ![Installateur](/wioi-duplicate-finder-docs/installer.png)
-<span style="font-size: 80%;">Cliquez sur Suivant (Next) tout au long de l'installateur pour sélectionner les options par défaut.</span>
+
+<span style="font-size: 80%;">
+  Cliquez sur Suivant (Next) tout au long de l'installateur pour sélectionner les options par
+  défaut.
+</span>
 
 ### Chargement des données
 
-La première fois que vous lancerez l'application, elle vous dirigera automatiquement vers l'écran des paramètres. Vous devrez importer le fichier WCVP (`wcvp_names.csv`) et le jeu de données de référence téléchargé ci-dessus pour votre région avant de pouvoir rechercher des doublons ou saisir des fiches. Si vous avez besoin de conseils pour charger des jeux de données, consultez la [page des paramètres](./docs/settings).
+La première fois que vous lancerez l'application, elle vous dirigera automatiquement vers l'écran
+des paramètres. Vous devrez importer le fichier WCVP (`wcvp_names.csv`) et le jeu de données de
+référence téléchargé ci-dessus pour votre région avant de pouvoir rechercher des doublons ou saisir
+des fiches. Si vous avez besoin de conseils pour charger des jeux de données, consultez la
+[page des paramètres](./docs/settings).
 
 ### Mises à jour de l'application
 
-Une fois installée, l'application vérifie automatiquement les mises à jour à chaque démarrage (tant que vous disposez d'une connexion Internet active). Si une nouvelle mise à jour est disponible, un bouton de notification s'affichera dans l'en-tête à côté du sélecteur de langue.
+Une fois installée, l'application vérifie automatiquement les mises à jour à chaque démarrage (tant
+que vous disposez d'une connexion Internet active). Si une nouvelle mise à jour est disponible, un
+bouton de notification s'affichera dans l'en-tête à côté du sélecteur de langue.
 
-En cliquant sur ce bouton, la mise à jour sera téléchargée et installée en arrière-plan, et l'application redémarrera automatiquement une fois l'installation terminée.
+En cliquant sur ce bouton, la mise à jour sera téléchargée et installée en arrière-plan, et
+l'application redémarrera automatiquement une fois l'installation terminée.

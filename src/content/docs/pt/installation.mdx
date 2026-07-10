@@ -5,57 +5,76 @@ next:
   link: /pt/docs/signin/
   label: Registrar / Entrar
 ---
+
 import release from '../../../config/release.json';
 import data from '../../../config/data.json';
 
-Para começar a usar o Localizador de Duplicatas (Duplicate Finder), você precisará baixar três itens: o instalador do aplicativo, uma cópia da taxonomia do World Checklist of Vascular Plants (WCVP) e um conjunto de dados de referência de espécimes para a sua região. Os links para download de cada um estão abaixo. 
+Para começar a usar o Localizador de Duplicatas (Duplicate Finder), você precisará baixar três
+itens: o instalador do aplicativo, uma cópia da taxonomia do World Checklist of Vascular Plants
+(WCVP) e um conjunto de dados de referência de espécimes para a sua região. Os links para download
+de cada um estão abaixo.
 
 #### Etapa 1: Baixe o instalador do aplicativo
 
 Clique no link abaixo para baixar o instalador:
 
 <p>
-  <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}>
+  <a
+    href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${release.version}/duplicate-finder_${release.version}_x64-setup.exe`}
+  >
     Instalador do aplicativo
   </a>
 </p>
 
-Incluímos instruções passo a passo abaixo sobre como executar o instalador assim que o download for concluído.
+Incluímos instruções passo a passo abaixo sobre como executar o instalador assim que o download for
+concluído.
 
 #### Etapa 2: Baixe os dados mais recentes do WCVP
 
-Os dados mais recentes do WCVP estão <a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">disponíveis aqui</a>. 
+Os dados mais recentes do WCVP estão
+<a href="https://sftp.kew.org/pub/data-repositories/WCVP/" target="_blank">disponíveis aqui</a>.
 
-Clique no link `wcvp.zip` para baixá-lo e depois descompacte o arquivo no seu computador. O WCVP é a base 
-taxonômica oficial por trás do portal <a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>.  É atualizado 
-aproximadamente a cada seis meses, e pode voltar periodicamente para obter a versão mais recente.
-
+Clique no link `wcvp.zip` para baixá-lo e depois descompacte o arquivo no seu computador. O WCVP é a
+base taxonômica oficial por trás do portal
+<a href="https://powo.science.kew.org/" target="_blank">Plants of the World Online (POWO)</a>. É
+atualizado aproximadamente a cada seis meses, e pode voltar periodicamente para obter a versão mais
+recente.
 
 #### Etapa 3: Selecione e baixe um conjunto de dados de referência (arquivo CSV) para a sua região
 
-Selecione e baixe o conjunto de dados de referência da sua região na lista abaixo. (Sinta-se à vontade para baixar várias regiões se a sua coleção abranger mais de uma). Esses conjuntos de dados estão compactados (zip), então você precisará descompactá-los após o download. 
+Selecione e baixe o conjunto de dados de referência da sua região na lista abaixo. (Sinta-se à
+vontade para baixar várias regiões se a sua coleção abranger mais de uma). Esses conjuntos de dados
+estão compactados (zip), então você precisará descompactá-los após o download.
 
 <ul>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/wioi_reference_br_g_k_mo_p.zip`}
+    >
       Ilhas do Oceano Índico Ocidental
     </a>
     (~540k registos)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_NA_BW_LS_SZ_SA.zip`}
+    >
       Região da Flora da África Austral (ZAR, LES, SWA, NAM, BOT)
     </a>
     (~2.1M registos)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_BW_ZW_MZ_MW_ZM.zip`}
+    >
       Região da Flora Zambeziaca (ZIM, BOT, MOZ, MAL, ZAM)
     </a>
     (~530k registos)
   </li>
   <li>
-    <a href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}>
+    <a
+      href={`https://github.com/ianengelbrecht/wioi-duplicate-finder/releases/download/app-v${data.release}/occurrence_final_AO.zip`}
+    >
       Flora Angolensis (ANG)
     </a>
     (~130k registos)
@@ -66,24 +85,41 @@ Selecione e baixe o conjunto de dados de referência da sua região na lista aba
 
 ### Instalando o Aplicativo
 
-Depois de baixar os arquivos, clique duas vezes no instalador do aplicativo (`.exe`) para iniciar a instalação.
+Depois de baixar os arquivos, clique duas vezes no instalador do aplicativo (`.exe`) para iniciar a
+instalação.
 
-Como o aplicativo não está assinado com um certificado comercial, o Windows SmartScreen mostrará uma tela de aviso azul dizendo **O Windows protegeu o seu computador**. Não se preocupe! Clique em **Mais informações** (More info) e depois em **Executar assim mesmo** (Run anyway) para prosseguir.
+Como o aplicativo não está assinado com um certificado comercial, o Windows SmartScreen mostrará uma
+tela de aviso azul dizendo **O Windows protegeu o seu computador**. Não se preocupe! Clique em
+**Mais informações** (More info) e depois em **Executar assim mesmo** (Run anyway) para prosseguir.
 
 ![Tela Azul de Instalação](/wioi-duplicate-finder-docs/blue-screen.png)
-<span style="font-size: 80%;">Clique em Mais informações (More info) e depois em Executar assim mesmo (Run anyway).</span>
 
-O instalador será executado e você poderá simplesmente aceitar as opções padrão para concluir a instalação.
+<span style="font-size: 80%;">
+  Clique em Mais informações (More info) e depois em Executar assim mesmo (Run anyway).
+</span>
+
+O instalador será executado e você poderá simplesmente aceitar as opções padrão para concluir a
+instalação.
 
 ![Instalador](/wioi-duplicate-finder-docs/installer.png)
-<span style="font-size: 80%;">Clique em Avançar (Next) em todas as etapas do instalador para selecionar as opções padrão.</span>
+
+<span style="font-size: 80%;">
+  Clique em Avançar (Next) em todas as etapas do instalador para selecionar as opções padrão.
+</span>
 
 ### Carregando dados
 
-A primeira vez que você executar o aplicativo, ele o levará automaticamente para a tela de configurações. Você precisará importar o arquivo do WCVP (`wcvp_names.csv`) e o conjunto de dados de referência baixado para a sua região acima antes de poder pesquisar duplicatas ou registrar espécimes. Se precisar de orientação para carregar conjuntos de dados, confira a [página de configurações](./docs/settings).
+A primeira vez que você executar o aplicativo, ele o levará automaticamente para a tela de
+configurações. Você precisará importar o arquivo do WCVP (`wcvp_names.csv`) e o conjunto de dados de
+referência baixado para a sua região acima antes de poder pesquisar duplicatas ou registrar
+espécimes. Se precisar de orientação para carregar conjuntos de dados, confira a
+[página de configurações](./docs/settings).
 
 ### Atualizações do aplicativo
 
-Uma vez instalado, o aplicativo verificará automaticamente se há atualizações sempre que você o abrir (desde que tenha uma conexão ativa com a internet). Se uma nova atualização estiver disponível, um botão de atualização aparecerá no cabeçalho superior, ao lado do seletor de idioma.
+Uma vez instalado, o aplicativo verificará automaticamente se há atualizações sempre que você o
+abrir (desde que tenha uma conexão ativa com a internet). Se uma nova atualização estiver
+disponível, um botão de atualização aparecerá no cabeçalho superior, ao lado do seletor de idioma.
 
-Clicar nesse botão fará o download e instalará a atualização em segundo plano, e o aplicativo será reiniciado automaticamente assim que for concluído.
+Clicar nesse botão fará o download e instalará a atualização em segundo plano, e o aplicativo será
+reiniciado automaticamente assim que for concluído.
