@@ -3,3 +3,20 @@ title: next
 sidebar:
   hidden: true
 ---
+
+### Paste Darwin Core data into the capture form
+
+To support workflows that include the use of AI to capture data from an image of a specimen label,
+the option is added to paste a JSON object containing Darwin Core data into the data capture form
+directly. The intention is that a user would post their image to their favourite LLM and request
+Darwin Core data with appopriate fields, in JSON format, and then copy/paste the result back into
+the tool. By doing so the tool can be integrated into workflows using AI.
+
+### App start up time
+
+I've attempted to speed up the startup time for the app (the part where it says it's normalizing the
+database or something like that). Not sure why this is always taking so long.
+
+### Other
+
+Only minor UI updates and fixes.

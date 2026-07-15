@@ -149,6 +149,118 @@ Several of the form fields use the local reference database to suggest values wh
 
 ---
 
+## AI assisted Data Capture
+
+![JSON button and specimen image](/wioi-duplicate-finder-docs/JSON-button.png)
+<span style="font-size: 80%;">Use your favourite AI model to read the specimen data from the label,
+and paste it into the form with the JSON button</span>
+
+AI is now being used extensively to speed up the process of data capture in herbaria. The Duplicate
+Finder tool facilitates the use of AI by allowing you to paste a Darwin Core JSON object directly
+into the form using the JSON button at the top right.
+
+All you need to do is paste the image of your specimen label data into your favourite AI model (it
+is best to screenshot the label in the specimen image, zoomed in -- use multiple screenshots if
+there are multiple labels), and use the prompt below to request the necessary data. Copy the result
+when it is ready and click the JSON button in the tool to add all the data there. Make sure to check
+it all and edit as needed, especially for hand-written labels.
+
+You only need to add the prompt to your first request to the AI, for every subsequent request just
+post the images and it will reuse the prompt.
+
+<div class="ai-prompt-container">
+  <span id="ai-prompt">Please read and translate this label into a Darwin Core JSON object (no field prefixes), with the following fields: catalogNumber (use the barcode number), recordedBy, recordNumber, verbatimEventDate, country, stateProvince, islandGroup, island (if they exist), locality, locationRemarks, verbatimCoordinates, verbatimElevation, habitat, identificationQualifier, scientificName, typeStatus, identifiedBy, dateIdentified, identificationRemarks, occurrenceRemarks, and fieldNotes (use this for plant description information). Also include a boolean property, cultivated (which is not Darwin Core), for whether the specimen is indicated as being cultivated or not (do not also include this in any other fields).</span>
+  <button id="copy-prompt" type="button" aria-label="Copy prompt">
+    <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
+    <svg id="check-icon" class="icon-hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+  </button>
+</div>
+
+<style>
+  .ai-prompt-container {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background-color: var(--sl-color-bg-nav);
+    font-family: var(--sl-font-mono, monospace);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  .ai-prompt-container span {
+    color: var(--sl-color-text);
+    word-break: break-word;
+  }
+  .ai-prompt-container button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.375rem;
+    background-color: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  .ai-prompt-container button:hover {
+    background-color: var(--sl-color-gray-5);
+    border-color: var(--sl-color-gray-3);
+  }
+  .ai-prompt-container button:active {
+    background-color: var(--sl-color-gray-4);
+  }
+  .ai-prompt-container #check-icon {
+    color: var(--sl-color-text-accent);
+  }
+  .ai-prompt-container .icon-hidden {
+    display: none !important;
+  }
+</style>
+
+<script>
+  (function() {
+    const copyButton = document.getElementById('copy-prompt');
+    const copyIcon = document.getElementById('copy-icon');
+    const checkIcon = document.getElementById('check-icon');
+    const promptElement = document.getElementById('ai-prompt');
+
+    let resetIconTimeout;
+
+    if (copyButton && promptElement) {
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(
+            promptElement.textContent.replace(/\s+/g, ' ').trim()
+          );
+
+          copyIcon.classList.add('icon-hidden');
+          checkIcon.classList.remove('icon-hidden');
+          copyButton.setAttribute('aria-label', 'Prompt copied');
+
+          clearTimeout(resetIconTimeout);
+
+          resetIconTimeout = setTimeout(() => {
+            checkIcon.classList.add('icon-hidden');
+            copyIcon.classList.remove('icon-hidden');
+            copyButton.setAttribute('aria-label', 'Copy prompt');
+          }, 3000);
+        } catch (error) {
+          console.error('Could not copy prompt:', error);
+        }
+      });
+    }
+  })();
+</script>
+
+---
+
 ## Field-by-Field Reference
 
 Below is a detailed guide to all 35 fields on the capture form. The field names are the internal

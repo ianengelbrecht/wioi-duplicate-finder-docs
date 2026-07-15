@@ -168,6 +168,120 @@ valeurs pendant la saisie.
 
 ---
 
+## Saisie de données assistée par IA
+
+![Bouton JSON et image de spécimen](/wioi-duplicate-finder-docs/JSON-button.png)
+<span style="font-size: 80%;">Utilisez votre modèle d'IA préféré pour lire les données de spécimen à
+partir de l'étiquette, et collez-les dans le formulaire avec le bouton JSON</span>
+
+L'IA est désormais largement utilisée pour accélérer le processus de saisie de données dans les
+herbiers. L'outil Duplicate Finder facilite l'utilisation de l'IA en vous permettant de coller un
+objet JSON Darwin Core directement dans le formulaire à l'aide du bouton JSON situé en haut à
+droite.
+
+Tout ce que vous avez à faire est de coller l'image de l'étiquette de votre spécimen dans votre
+modèle d'IA préféré (il est préférable de faire une capture d'écran de l'étiquette zoomée dans
+l'image du spécimen -- utilisez plusieurs captures d'écran s'il y a plusieurs étiquettes) et
+d'utiliser l'invite ci-dessous pour demander les données nécessaires. Copiez le résultat lorsqu'il
+est prêt et cliquez sur le bouton JSON dans l'outil pour y ajouter toutes les données. Veillez à
+tout vérifier et à modifier si nécessaire, en particulier pour les étiquettes manuscrites.
+
+Vous devez seulement ajouter le prompt à votre première requête à l’IA ; pour toutes les requêtes
+suivantes, il suffit de publier les images et elle réutilisera le prompt.
+
+<div class="ai-prompt-container">
+  <span id="ai-prompt">Veuillez lire et traduire cette étiquette en un objet JSON Darwin Core (sans préfixe de champ), avec les champs suivants : catalogNumber (utilisez le numéro de code-barres), recordedBy, recordNumber, verbatimEventDate, country, stateProvince, islandGroup, island (s'ils existent), locality, locationRemarks, verbatimCoordinates, verbatimElevation, habitat, identificationQualifier, scientificName, typeStatus, identifiedBy, dateIdentified, identificationRemarks, occurrenceRemarks, et fieldNotes (utilisez ceci pour les informations de description de la plante). Incluez également une propriété booléenne, cultivated (qui n'est pas du Darwin Core), indiquant si le spécimen est cultivé ou non (ne l'incluez pas dans d'autres champs).</span>
+  <button id="copy-prompt" type="button" aria-label="Copier l'invite">
+    <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
+    <svg id="check-icon" class="icon-hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+  </button>
+</div>
+
+<style>
+  .ai-prompt-container {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background-color: var(--sl-color-bg-nav);
+    font-family: var(--sl-font-mono, monospace);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  .ai-prompt-container span {
+    color: var(--sl-color-text);
+    word-break: break-word;
+  }
+  .ai-prompt-container button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.375rem;
+    background-color: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  .ai-prompt-container button:hover {
+    background-color: var(--sl-color-gray-5);
+    border-color: var(--sl-color-gray-3);
+  }
+  .ai-prompt-container button:active {
+    background-color: var(--sl-color-gray-4);
+  }
+  .ai-prompt-container #check-icon {
+    color: var(--sl-color-text-accent);
+  }
+  .ai-prompt-container .icon-hidden {
+    display: none !important;
+  }
+</style>
+
+<script>
+  (function() {
+    const copyButton = document.getElementById('copy-prompt');
+    const copyIcon = document.getElementById('copy-icon');
+    const checkIcon = document.getElementById('check-icon');
+    const promptElement = document.getElementById('ai-prompt');
+
+    let resetIconTimeout;
+
+    if (copyButton && promptElement) {
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(
+            promptElement.textContent.replace(/\s+/g, ' ').trim()
+          );
+
+          copyIcon.classList.add('icon-hidden');
+          checkIcon.classList.remove('icon-hidden');
+          copyButton.setAttribute('aria-label', 'Invite copiée');
+
+          clearTimeout(resetIconTimeout);
+
+          resetIconTimeout = setTimeout(() => {
+            checkIcon.classList.add('icon-hidden');
+            copyIcon.classList.remove('icon-hidden');
+            copyButton.setAttribute('aria-label', 'Copier l\'invite');
+          }, 3000);
+        } catch (error) {
+          console.error('Could not copy prompt:', error);
+        }
+      });
+    }
+  })();
+</script>
+
+---
+
 ## Référence champ par champ
 
 Voici un guide détaillé des 35 champs du formulaire de saisie. Les noms des champs sont les noms de

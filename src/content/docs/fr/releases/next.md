@@ -1,0 +1,24 @@
+---
+title: suivant
+sidebar:
+  hidden: true
+---
+
+### Coller les données Darwin Core dans le formulaire de saisie
+
+Pour prendre en charge les flux de travail impliquant l'utilisation de l'IA pour capturer des
+données à partir de l'image de l'étiquette d'un spécimen, l'option a été ajoutée pour coller
+directement un objet JSON contenant des données Darwin Core dans le formulaire de saisie des
+données. L'intention est que l'utilisateur soumette son image à son LLM préféré, demande les données
+Darwin Core avec les champs appropriés au format JSON, puis copie/colle le résultat dans l'outil. De
+cette manière, l'outil peut être intégré dans les flux de travail utilisant l'IA.
+
+### Temps de démarrage de l’application
+
+J’ai essayé d’accélérer le temps de démarrage de l’application, c’est-à-dire la partie où un message
+indique qu’elle normalise la base de données, ou quelque chose dans ce genre. Je ne sais pas trop
+pourquoi cela prend toujours autant de temps.
+
+### Autre
+
+Uniquement des mises à jour mineures de l'interface utilisateur et des corrections de bogues.

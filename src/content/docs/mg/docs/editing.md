@@ -171,7 +171,121 @@ hanomezana soso-kevitra sanda rehefa manoratra ianao.
   sora-tanana), dia **tsy sakanana** ianao. Azonao atao fotsiny ny manoratra ny anarana vaovao sy
   mitahiry ny firaketana. Any aoriana, ny tahirin-kevitra dia mitahiry ny WCVP taxonID ho an'ny
   anarana efa misy (ary mamoaka izany raha ilaina). Ny anarana vaovao kosa dia tsy hisy sanda ao
-  amin'ny `taxonID`.
+  amin'ny `taxonID`.---
+
+## Fampidirana Angon-drakitra miaraka amin'ny AI
+
+![Bokotra JSON sy sarin'ny santiona](/wioi-duplicate-finder-docs/JSON-button.png)
+<span style="font-size: 80%;">Ampiasao ny modely AI tianao indrindra mba hamakiana ny angon-drakitra
+santiona avy amin'ny marika, ary apetaho ao amin'ny takelaka amin'ny alalan'ny bokotra JSON</span>
+
+Ampiasaina betsaka ankehitriny ny AI mba hanafainganana ny fizotran'ny fandraisana angon-drakitra
+any amin'ireo herbarium. Ny fitaovana Duplicate Finder dia manamora ny fampiasana AI amin'ny
+alàlan'ny famelana anao hametaka mivantana ny zavatra JSON Darwin Core ao amin'ny takelaka amin'ny
+alàlan'ny bokotra JSON eo ambony havanana.
+
+Ny hany tokony hataonao dia ny mametaka ny sarin'ny mariky ny santionanao ao amin'ny modely AI
+tianao (tsara kokoa raha alaina sary (screenshot) ny marika amin'ny sarin'ny santiona, atao lehibe
+-- mampiasà sary maromaro raha misy marika mihoatra ny iray), ary ampiasao ity toromarika manaraka
+ity mba hangatahana ny angon-drakitra ilaina. Adikao ny valiny rehefa vonona ary tsindrio ny bokotra
+JSON ao amin'ny fitaovana mba hampidirana ny data rehetra ao. Ataovy azo antoka ny manamarina izany
+rehetra izany ary manova araka izay ilaina, indrindra ho an'ireo marika nosoratana tamin'ny tanana.
+
+Mila ampidirina amin’ny fangatahanao voalohany amin’ny AI ihany ny prompt; amin’ny fangatahana
+manaraka rehetra dia alefaso fotsiny ny sary, dia hampiasa indray ilay prompt izy.
+
+<div class="ai-prompt-container">
+  <span id="ai-prompt">Ahafaho mamaky sy mandika ity marika ity ho zavatra JSON Darwin Core (tsy misy tovana eo aloha ho an'ny faritra), miaraka amin'ireto faritra ireto: catalogNumber (ampiasao ny laharan'ny barcode), recordedBy, recordNumber, verbatimEventDate, country, stateProvince, islandGroup, island (raha misy), locality, locationRemarks, verbatimCoordinates, verbatimElevation, habitat, identificationQualifier, scientificName, typeStatus, identifiedBy, dateIdentified, identificationRemarks, occurrenceRemarks, ary fieldNotes (ampiasao ity ho an'ny mombamomba ny famaritana ny zavamaniry). Ampidiro koa ny sanda boolean, cultivated (izay tsy an'ny Darwin Core), raha toa ka nambolena na tsia ilay santiona (aza ampidirina amin'ny faritra hafa izany).</span>
+  <button id="copy-prompt" type="button" aria-label="Adikao ny toromarika">
+    <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
+    <svg id="check-icon" class="icon-hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+  </button>
+</div>
+
+<style>
+  .ai-prompt-container {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 1.25rem 3.5rem 1.25rem 1.25rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    background-color: var(--sl-color-bg-nav);
+    font-family: var(--sl-font-mono, monospace);
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  .ai-prompt-container span {
+    color: var(--sl-color-text);
+    word-break: break-word;
+  }
+  .ai-prompt-container button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1px solid var(--sl-color-gray-4);
+    border-radius: 0.375rem;
+    background-color: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  .ai-prompt-container button:hover {
+    background-color: var(--sl-color-gray-5);
+    border-color: var(--sl-color-gray-3);
+  }
+  .ai-prompt-container button:active {
+    background-color: var(--sl-color-gray-4);
+  }
+  .ai-prompt-container #check-icon {
+    color: var(--sl-color-text-accent);
+  }
+  .ai-prompt-container .icon-hidden {
+    display: none !important;
+  }
+</style>
+
+<script>
+  (function() {
+    const copyButton = document.getElementById('copy-prompt');
+    const copyIcon = document.getElementById('copy-icon');
+    const checkIcon = document.getElementById('check-icon');
+    const promptElement = document.getElementById('ai-prompt');
+
+    let resetIconTimeout;
+
+    if (copyButton && promptElement) {
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(
+            promptElement.textContent.replace(/\s+/g, ' ').trim()
+          );
+
+          copyIcon.classList.add('icon-hidden');
+          checkIcon.classList.remove('icon-hidden');
+          copyButton.setAttribute('aria-label', 'Kopia vita');
+
+          clearTimeout(resetIconTimeout);
+
+          resetIconTimeout = setTimeout(() => {
+            checkIcon.classList.add('icon-hidden');
+            copyIcon.classList.remove('icon-hidden');
+            copyButton.setAttribute('aria-label', 'Adikao ny toromarika');
+          }, 3000);
+        } catch (error) {
+          console.error('Could not copy prompt:', error);
+        }
+      });
+    }
+  })();
+</script>
+
+---
 
 ## Mombamomba ny Faritra Tsirairay
 

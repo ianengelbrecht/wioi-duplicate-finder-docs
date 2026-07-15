@@ -1,0 +1,24 @@
+---
+title: próximo
+sidebar:
+  hidden: true
+---
+
+### Colar dados do Darwin Core no formulário de captura
+
+Para suportar fluxos de trabalho que incluem o uso de IA para capturar dados a partir de uma imagem
+da etiqueta de um espécime, foi adicionada a opção de colar um objeto JSON contendo dados do Darwin
+Core diretamente no formulário de captura de dados. A intenção é que o usuário envie sua imagem para
+seu LLM favorito, solicite os dados do Darwin Core com os campos apropriados em formato JSON, e
+depois copie/cole o resultado de volta na ferramenta. Dessa forma, a ferramenta pode ser integrada a
+fluxos de trabalho que utilizam IA.
+
+### ### Tempo de arranque da aplicação
+
+Tentei acelerar o tempo de arranque da aplicação, ou seja, a parte em que aparece uma mensagem a
+dizer que está a normalizar a base de dados, ou algo desse género. Não sei bem por que razão isto
+demora sempre tanto tempo.
+
+### Outro
+
+Apenas atualizações menores na interface do usuário e correções de bugs.
