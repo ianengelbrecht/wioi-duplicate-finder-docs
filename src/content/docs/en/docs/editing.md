@@ -171,10 +171,17 @@ post the images and it will reuse the prompt.
 <div class="ai-prompt-container">
   <span id="ai-prompt">Please read and translate this label into a Darwin Core JSON object (no field prefixes), with the following fields: catalogNumber (use the barcode number), recordedBy, recordNumber, verbatimEventDate, country, stateProvince, islandGroup, island (if they exist), locality, locationRemarks, verbatimCoordinates, verbatimElevation, habitat, identificationQualifier, scientificName, typeStatus, identifiedBy, dateIdentified, identificationRemarks, occurrenceRemarks, and fieldNotes (use this for plant description information). Also include a boolean property, cultivated (which is not Darwin Core), for whether the specimen is indicated as being cultivated or not (do not also include this in any other fields).</span>
   <button id="copy-prompt" type="button" aria-label="Copy prompt">
-    <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M184,64H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H184a8,8,0,0,0,8-8V72A8,8,0,0,0,184,64Zm-8,144H48V80H176ZM224,40V184a8,8,0,0,1-16,0V48H72a8,8,0,0,1,0-16H216A8,8,0,0,1,224,40Z"></path></svg>
-    <svg id="check-icon" class="icon-hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+    <svg id="copy-icon" class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M200,32H163.74a47.92,47.92,0,0,0-71.48,0H56A16,16,0,0,0,40,48V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V48A16,16,0,0,0,200,32Zm-72,0a32,32,0,0,1,32,32H96A32,32,0,0,1,128,32Zm72,184H56V48H82.75A47.93,47.93,0,0,0,80,64v8a8,8,0,0,0,8,8h80a8,8,0,0,0,8-8V64a47.93,47.93,0,0,0-2.75-16H200Z"></path></svg>
+    <svg id="check-icon" class="icon-hidden" style="position:relative; top:-.5em;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
   </button>
 </div>
+
+If you need to capture the identification from a determination slip that is not included near the
+main label, you can add a second image of that, and add this to your prompt:
+
+```
+Use the determination slip for the identification information.
+```
 
 <style>
   .ai-prompt-container {
